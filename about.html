@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,24 +48,19 @@
     <!----------------------------------------->
     <!----- Header Section ----->
     <!----------------------------------------->
-    <header
-     class="bg-white sticky top-0 z-50">
+    <header class="bg-white sticky top-0 z-40">
       <div class="container">
         <div
           class="content flex justify-between items-center text-slate-800 py-4 md:py-6"
         >
           <div class="logo">
             <figure>
-              <img
-                class="w-40 lg:w-[13rem]"
-                src="./images/nav/logo.png"
-                alt="logo"
-              />
+              <img class="w-[13rem]" src="./images/nav/logo.png" alt="logo" />
             </figure>
           </div>
           <nav>
             <!-- Nav Large -->
-            <div class="nav_large hidden md:block">
+            <div class="nav_large hidden lg:block">
               <ul class="lg:flex gap-12 font-bold capitalize py-2">
                 <li>
                   <a
@@ -118,112 +113,105 @@
                 </li>
               </ul>
             </div>
-            <!-- Nav Small -->
-            <div class="md:hidden nav_small overflow-hidden">
-              <!-- nav Btn -->
-              <div
-                x-on:click="nav = ! nav"
-                class="nav_btn grid gap-2 cursor-pointer"
-              >
-                <div class="w-8 h-[2px] bg-slate-900"></div>
-                <div class="w-8 h-[2px] bg-slate-900"></div>
-                <div class="w-8 h-[2px] bg-slate-900"></div>
-              </div>
-              <div
-                x-bind:class="nav ? 'opacity-100 z-50' : 'opacity-0 -z-10' "
-                class="wrapper absolute top-0 right-0 transform transition-all duration-1000 h-screen bg-default-small-nav w-72"
-              >
-                <div class="logo py-10 px-6 flex justify-between items-center">
-                  <img
-                    class="w-[10rem]"
-                    src="./images/footer/footer-logo.png"
-                    alt=""
-                  />
-                  <div
-                    x-on:click="nav = ! nav"
-                    class="cross font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
-                  >
-                    <i class="fa-solid fa-xmark"></i>
-                  </div>
-                </div>
-                <ul
-                  class="text-white uppercase py-2 flex flex-col items-start"
-                >
-                  <li
-                    class="flex border-y-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="./index.html"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >home</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="./about.html"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >about</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="#"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >Services</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="#"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >elements</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="#"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >Shop</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="#"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >blog</a
-                    >
-                  </li>
-                  <li
-                    class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-                  >
-                    <a
-                      href="#"
-                      class="hover:text-cyan-400 transition-all duration-300"
-                      >contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
           </nav>
-
-          <div class="hidden md:flex icons gap-10 text-lg">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+          <!-- nav Btn -->
+          <div
+            x-on:click="nav = ! nav"
+            class="nav_btn grid gap-2 cursor-pointer"
+          >
+            <div class="w-8 h-[2px] bg-slate-900"></div>
+            <div class="w-8 h-[2px] bg-slate-900"></div>
+            <div class="w-8 h-[2px] bg-slate-900"></div>
+          </div>
+          <!-- Icons -->
+          <div class="hidden lg:flex icons gap-10 text-lg">
+            <i class="cursor-pointer fa-solid fa-magnifying-glass"></i>
+            <a href="#" class="flex items-center">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Nav Small -->
+    <nav
+      class="nav_small flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-50"
+      x-bind:class="nav ? 'visible' : 'invisible' "
+      class=""
+    >
+      <!-- floating -->
+      <div
+        x-bind:class="nav ? 'translate-x-0' : 'translate-x-full' "
+        class="wrapper absolute top-0 right-0 bottom-0 transform transition-all duration-1000 bg-default-small-nav w-72"
+      >
+        <div class="logo py-10 px-6 flex justify-between items-center">
+          <img class="w-[10rem]" src="./images/footer/footer-logo.png" alt="" />
+          <div
+            x-on:click="nav = ! nav"
+            class="cross font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <ul class="text-white uppercase py-2 flex flex-col items-start">
+          <li
+            class="flex border-y-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a
+              aria-current="true"
+              href="./index.html"
+              class="hover:text-cyan-400 transition-all duration-300"
+              >home</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a
+              href="./about.html"
+              class="hover:text-cyan-400 transition-all duration-300"
+              >about</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
+              >Services</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
+              >elements</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
+              >Shop</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
+              >blog</a
+            >
+          </li>
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+          >
+            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!----------------------------------------->
     <!----- Main Section ----->
@@ -301,11 +289,15 @@
           class="content grid justify-center items-center gap-14 text-default-text-col"
         >
           <div class="header">
-            <h2 class=" text-default-text-col">A Trusted Name In Bottled Water Industry</h2>
+            <h2 class="text-default-text-col">
+              A Trusted Name In Bottled Water Industry
+            </h2>
           </div>
           <div class="text grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="item_1 grid gap-4">
-              <h4 class="text-default-text-col text-3xl font-normal capitalize font-spartan">
+              <h4
+                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+              >
                 Maxium Purity
               </h4>
               <span class="text-default-light-stone"
@@ -349,9 +341,7 @@
     <!----------------------------------------->
     <!----- Protect Section ----->
     <!----------------------------------------->
-    <section
-      class="protect relative text-white pb-32 lg:mb-32 overflow-hidden"
-    >
+    <section class="protect relative text-white pb-32 lg:mb-32 overflow-hidden">
       <!-- All Content Wrapper -->
       <!-- Protect bg -->
       <div class="absolute top-0 left-0 protect_left_bg">
@@ -421,7 +411,9 @@
       <div class="container">
         <div class="content">
           <div class="header">
-            <h2 class=" text-default-text-col">What Our Client are Saying About Acuasafe</h2>
+            <h2 class="text-default-text-col">
+              What Our Client are Saying About Acuasafe
+            </h2>
             <div class="swiper client_slider py-20">
               <div class="swiper-wrapper pt-10 pb-20">
                 <!-- Client 1 -->
@@ -674,7 +666,9 @@
         <div class="cotent lg:grid lg:grid-cols-2 gap-20">
           <div class="left flex flex-col gap-6 items-center">
             <div class="header capitalize">
-              <h2 class=" text-default-text-col">Choose Your Best Pricing Plan</h2>
+              <h2 class="text-default-text-col">
+                Choose Your Best Pricing Plan
+              </h2>
             </div>
             <p class="text-default-light-stone">
               cuasafe ensures quality over services along with affordable
@@ -906,7 +900,9 @@
       <div class="container text-start">
         <div class="content grid gap-12 items-center">
           <div class="header justify-self-center text-center">
-            <h2 class=" text-default-text-col">Our Dedicated Team Members value Your Needs</h2>
+            <h2 class="text-default-text-col">
+              Our Dedicated Team Members value Your Needs
+            </h2>
           </div>
           <!-- Team members -->
           <div
