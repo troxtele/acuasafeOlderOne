@@ -51,6 +51,7 @@
   </head>
 
   <body
+    x-data="{nav: false}"
     class="text-md text-center text-default-text-col w-full h-full relative"
   >
     <!----------------------------------------->
@@ -70,10 +71,10 @@
               />
             </figure>
           </div>
-          <nav x-data="{nav: false}">
+          <nav>
             <!-- Nav Large -->
-            <div class="nav_large">
-              <ul class="hidden lg:flex gap-12 font-bold capitalize py-2">
+            <div class="nav_large hidden md:block">
+              <ul class="lg:flex gap-12 font-bold capitalize py-2">
                 <li>
                   <a
                     href="./index.html"
@@ -83,7 +84,7 @@
                 </li>
                 <li>
                   <a
-                    href="./about.html"
+                    href="about.html"
                     class="hover:text-cyan-400 transition-all duration-300"
                     >about</a
                   >
@@ -126,7 +127,7 @@
               </ul>
             </div>
             <!-- Nav Small -->
-            <div class="hidden nav_small overflow-hidden">
+            <div class="md:hidden nav_small overflow-hidden">
               <!-- nav Btn -->
               <div
                 x-on:click="nav = ! nav"
@@ -137,8 +138,8 @@
                 <div class="w-8 h-[2px] bg-slate-900"></div>
               </div>
               <div
-                x-bind:class="nav ? 'right-0' : '-right-full' "
-                class="wrapper absolute top-0 transform transition-all duration-1000 h-screen bg-default-small-nav w-72"
+                x-bind:class="nav ? 'opacity-100 z-50' : 'opacity-0 -z-10' "
+                class="wrapper absolute top-0 right-0 transform transition-all duration-1000 h-screen bg-default-small-nav w-72"
               >
                 <div class="logo py-10 px-6 flex justify-between items-center">
                   <img
@@ -224,7 +225,7 @@
             </div>
           </nav>
 
-          <div class="hidden icons gap-10 text-lg">
+          <div class="hidden md:flex icons gap-10 text-lg">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -308,7 +309,11 @@
         <div class="large_bottle relative">
           <!-- water drop -->
           <div class="water_drop absolute bottom-6">
-            <img class="w-[14rem]" src="./images/main/vector-2.png" alt="water-drop" />
+            <img
+              class="w-[14rem]"
+              src="./images/main/vector-2.png"
+              alt="water-drop"
+            />
           </div>
           <div class="bottle_img flex justify-center relative">
             <img src="./images/main/vector-1.png" alt="bottle" />
@@ -880,6 +885,12 @@
         </div>
       </div>
     </section>
+    <!-- overlay -->
+    <div
+      @click="nav = false"
+      x-bind:class="nav ? 'bg-black/70 z-[30]' : '-z-10'"
+      class="overlay absolute inset-0 transition-all duration-800"
+    ></div>
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
