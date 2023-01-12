@@ -48,15 +48,16 @@
     <!----------------------------------------->
     <!----- Header Section ----->
     <!----------------------------------------->
-    <header class="bg-slate-50/80 backdrop-blur-lg sticky top-0 z-50">
+    <header
+     class="bg-white sticky top-0 z-50">
       <div class="container">
         <div
-          class="content flex justify-between items-center text-slate-800 py-8"
+          class="content flex justify-between items-center text-slate-800 py-4 md:py-6"
         >
           <div class="logo">
             <figure>
               <img
-                class="w-40 lg:w-[15rem]"
+                class="w-40 lg:w-[13rem]"
                 src="./images/nav/logo.png"
                 alt="logo"
               />
@@ -140,13 +141,13 @@
                   />
                   <div
                     x-on:click="nav = ! nav"
-                    class="cross font-bold text-slate-50 text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
+                    class="cross font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
                   >
                     <i class="fa-solid fa-xmark"></i>
                   </div>
                 </div>
                 <ul
-                  class="text-slate-50 uppercase py-2 flex flex-col items-start"
+                  class="text-white uppercase py-2 flex flex-col items-start"
                 >
                   <li
                     class="flex border-y-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
@@ -236,7 +237,7 @@
           <div
             class="content text-6xl md:text-7xl flex justify-center items-center h-full"
           >
-            <h1 class="capitalize font-bold text-slate-50">About Us</h1>
+            <h1 class="capitalize font-bold text-white">About Us</h1>
           </div>
         </div>
         <div class="absolute bottom-0 w-full">
@@ -281,7 +282,7 @@
             </div>
             <button class="mt-6">
               <a
-                class="text-slate-50 bg-cyan-400 rounded-full py-3 px-10 text-xl"
+                class="text-white bg-cyan-400 rounded-full py-3 px-10 text-xl"
                 href="#"
               >
                 Services
@@ -300,11 +301,11 @@
           class="content grid justify-center items-center gap-14 text-default-text-col"
         >
           <div class="header">
-            <h2>A Trusted Name In Bottled Water Industry</h2>
+            <h2 class=" text-default-text-col">A Trusted Name In Bottled Water Industry</h2>
           </div>
           <div class="text grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="item_1 grid gap-4">
-              <h4 class="text-3xl text-bold capitalize font-spartan">
+              <h4 class="text-default-text-col text-3xl font-normal capitalize font-spartan">
                 Maxium Purity
               </h4>
               <span class="text-default-light-stone"
@@ -313,7 +314,7 @@
             </div>
             <div class="item_2 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl text-bold capitalize font-spartan"
+                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
               >
                 Cholorine Free
               </h4>
@@ -323,7 +324,7 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl text-bold capitalize font-spartan"
+                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
               >
                 5 Steps Filtration
               </h4>
@@ -333,9 +334,9 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl text-bold capitalize font-spartan"
+                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
               >
-                Maxium Purity
+                healthy water
               </h4>
               <span class="text-default-light-stone"
                 >We maintain balanced PH level for healthiest water.
@@ -349,7 +350,7 @@
     <!----- Protect Section ----->
     <!----------------------------------------->
     <section
-      class="protect relative text-slate-50 pb-32 lg:mb-32 overflow-hidden"
+      class="protect relative text-white pb-32 lg:mb-32 overflow-hidden"
     >
       <!-- All Content Wrapper -->
       <!-- Protect bg -->
@@ -420,7 +421,7 @@
       <div class="container">
         <div class="content">
           <div class="header">
-            <h2>What Our Client are Saying About Acuasafe</h2>
+            <h2 class=" text-default-text-col">What Our Client are Saying About Acuasafe</h2>
             <div class="swiper client_slider py-20">
               <div class="swiper-wrapper pt-10 pb-20">
                 <!-- Client 1 -->
@@ -673,7 +674,7 @@
         <div class="cotent lg:grid lg:grid-cols-2 gap-20">
           <div class="left flex flex-col gap-6 items-center">
             <div class="header capitalize">
-              <h2>Choose Your Best Pricing Plan</h2>
+              <h2 class=" text-default-text-col">Choose Your Best Pricing Plan</h2>
             </div>
             <p class="text-default-light-stone">
               cuasafe ensures quality over services along with affordable
@@ -687,7 +688,7 @@
               <!-- Monthly -->
               <button
                 x-on:click="swapToggle = 'monthly'"
-                x-bind:class="swapToggle === 'monthly' ? 'bg-default-blue text-slate-50': '' "
+                x-bind:class="swapToggle === 'monthly' ? 'bg-default-blue text-white': '' "
                 class="monthly transition-all duration-500 capitalize w-full h-full py-3 px-2"
               >
                 monthly
@@ -695,7 +696,7 @@
               <!-- Yearly -->
               <button
                 x-on:click="swapToggle = 'yearly'"
-                x-bind:class="swapToggle === 'yearly' ? 'bg-default-blue text-slate-50' : '' "
+                x-bind:class="swapToggle === 'yearly' ? 'bg-default-blue text-white' : '' "
                 class="yearly transition-all duration-500 capitalize w-full h-full py-3 px-2"
               >
                 yearly
@@ -710,7 +711,7 @@
             <!-- cart -->
             <div
               x-bind:class="swapToggle === 'yearly' ? 'translate-x-0 scale-100 z-20': 'absolute translate-x-52  scale-[.8]' "
-              class="cart bg-slate-50 transform duration-1000"
+              class="cart bg-white transform duration-1000"
             >
               <div class="relative border-slate-500 shadow-xl">
                 <!-- Price -->
@@ -725,7 +726,7 @@
                   </div>
                   <!-- price -->
                   <div
-                    class="price absolute right-[41px] grid gap-1 bg-default-blue w-[89px] text-slate-50"
+                    class="price absolute right-[41px] grid gap-1 bg-default-blue w-[89px] text-white"
                   >
                     <span class="font-bold text-3xl">$299</span>
                     <span class="uppercase">yearly</span>
@@ -747,7 +748,7 @@
                 </div>
                 <!-- Header -->
                 <div
-                  class="header absolute top-[1rem] left-[2.6rem] capitalize text-slate-50 text-xl sm:text-3xl font-bold"
+                  class="header absolute top-[1rem] left-[2.6rem] capitalize text-white text-xl sm:text-3xl font-bold"
                 >
                   <h3>
                     Standard <br />
@@ -794,7 +795,7 @@
 
                 <!-- Button -->
                 <button
-                  class="my-8 text-slate-50 bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 text-xl"
+                  class="my-8 text-white bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 text-xl"
                 >
                   <a href="#" class="capitalize font-semibold"> learn more </a>
                 </button>
@@ -804,7 +805,7 @@
             <!-- monthly -->
             <div
               x-bind:class="swapToggle === 'monthly' ? 'translate-x-0 scale-100 z-20': 'absolute translate-x-52 scale-[.8]' "
-              class="cart bg-slate-50 transform duration-1000"
+              class="cart bg-white transform duration-1000"
             >
               <div class="relative border-slate-500 shadow-xl">
                 <!-- Price -->
@@ -819,7 +820,7 @@
                   </div>
                   <!-- price -->
                   <div
-                    class="price absolute right-[41px] grid gap-1 bg-default-blue w-[89px] text-slate-50"
+                    class="price absolute right-[41px] grid gap-1 bg-default-blue w-[89px] text-white"
                   >
                     <span class="font-bold text-3xl">$49</span>
                     <span class="uppercase">monthly</span>
@@ -841,7 +842,7 @@
                 </div>
                 <!-- Header -->
                 <div
-                  class="header absolute top-[1rem] left-[2.6rem] capitalize text-slate-50 text-xl sm:text-3xl font-bold"
+                  class="header absolute top-[1rem] left-[2.6rem] capitalize text-white text-xl sm:text-3xl font-bold"
                 >
                   <h3>
                     Standard <br />
@@ -888,7 +889,7 @@
 
                 <!-- Button -->
                 <button
-                  class="my-8 text-slate-50 bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 text-xl"
+                  class="my-8 text-white bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 text-xl"
                 >
                   <a href="#" class="capitalize font-semibold"> learn more </a>
                 </button>
@@ -905,7 +906,7 @@
       <div class="container text-start">
         <div class="content grid gap-12 items-center">
           <div class="header justify-self-center text-center">
-            <h2 class="">Our Dedicated Team Members value Your Needs</h2>
+            <h2 class=" text-default-text-col">Our Dedicated Team Members value Your Needs</h2>
           </div>
           <!-- Team members -->
           <div
@@ -927,7 +928,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-twitter"></i>
                       </a>
@@ -935,7 +936,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-linkedin-in"></i>
                       </a>
@@ -943,7 +944,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-facebook-f"></i>
                       </a>
@@ -982,7 +983,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-twitter"></i>
                       </a>
@@ -990,7 +991,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-linkedin-in"></i>
                       </a>
@@ -998,7 +999,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-facebook-f"></i>
                       </a>
@@ -1037,7 +1038,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-twitter"></i>
                       </a>
@@ -1045,7 +1046,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-linkedin-in"></i>
                       </a>
@@ -1053,7 +1054,7 @@
                     <li class="">
                       <a
                         href="#"
-                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-slate-50 transition-all duration-300"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
                       >
                         <i class="fa-brands fa-facebook-f"></i>
                       </a>
@@ -1084,7 +1085,7 @@
     <!----------------------------------------->
     <!----- Footer Section ----->
     <!----------------------------------------->
-    <footer class="overflow-hidden bg-default-footer-bg mt-20 text-slate-50">
+    <footer class="overflow-hidden bg-default-footer-bg mt-20 text-white">
       <div class="footer_curbe_bg">
         <img class="" src="./images/footer/footer.png" alt="" />
       </div>
@@ -1101,7 +1102,7 @@
           <button class="">
             <a
               href="tel:http://(773)%20225-3523"
-              class="text-slate-50 bg-cyan-400 rounded-full py-3 px-8 sm:py-5 sm:px-10 text-lg sm:text-xl flex justify-center items-center gap-4"
+              class="text-white bg-cyan-400 rounded-full py-3 px-8 sm:py-5 sm:px-10 text-lg sm:text-xl flex justify-center items-center gap-4"
               ><i class="fas fa-phone"></i>(773) 225-3523</a
             >
           </button>
@@ -1202,13 +1203,13 @@
                   type="email"
                   value=""
                   size="40"
-                  class="input w-full h-full border-none focus: bg-transparent placeholder:select-none placeholder:text-slate-400 py-4 pl-5 focus:outline-none focus:border-4 focus:border-l-default-blue focus:border-y-default-blue focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-bl-full rounded-tl-full"
+                  class="input w-full h-full border-none focus: bg-transparent placeholder:select-none placeholder:text-slate-400 py-4 pl-5 focus:outline-none focus:border-4 focus:border-l-default-blue focus:border-y-default-blue focus:ring-1 focus:ring-sky-500 disabled:bg-white disabled:text-white0 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-bl-full rounded-tl-full"
                   aria-required="true"
                   aria-invalid="false"
                   placeholder="Your Email"
               /></span>
               <button
-                class="px-4 bg-default-blue text-slate-50 border-l rounded-tr-md border-tr"
+                class="px-4 bg-default-blue text-white border-l rounded-tr-md border-tr"
                 type="submit"
               >
                 <i class="fa-solid fa-arrow-right"></i>
@@ -1248,28 +1249,28 @@
                 <li>
                   <a
                     href="#"
-                    class="w-10 h-10 flex justify-center items-center rounded-full bg-slate-500 hover:bg-default-blue transition-all duration-300 hover:text-slate-50"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white0 hover:bg-default-blue transition-all duration-300 hover:text-white"
                     ><i class="fa-brands fa-facebook-f"></i
                   ></a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="w-10 h-10 flex justify-center items-center rounded-full bg-slate-500 hover:bg-default-blue transition-all duration-300 hover:text-slate-50"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white0 hover:bg-default-blue transition-all duration-300 hover:text-white"
                     ><i class="fa-brands fa-twitter"></i
                   ></a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="w-10 h-10 flex justify-center items-center rounded-full bg-slate-500 hover:bg-default-blue transition-all duration-300 hover:text-slate-50"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white0 hover:bg-default-blue transition-all duration-300 hover:text-white"
                     ><i class="fa-brands fa-google-plus-g"></i
                   ></a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="w-10 h-10 flex justify-center items-center rounded-full bg-slate-500 hover:bg-default-blue transition-all duration-300 hover:text-slate-50"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white0 hover:bg-default-blue transition-all duration-300 hover:text-white"
                     ><i class="fa-brands fa-linkedin-in"></i
                   ></a>
                 </li>
