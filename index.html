@@ -12,10 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
-    <!-- League Sparta -->
+
+    <!-- Spartran -->
     <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Spartan%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i%7COpen%2BSans%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i&amp;subset=latin%2Clatin-ext"
     />
     <!-- Font awesome -->
     <link
@@ -49,21 +50,24 @@
 
   <body
     x-data="{nav: false}"
+    :class="nav ? 'overflow-hidden' : 'overflow-visible'"
     class="text-md text-center text-default-text-col w-full h-full relative"
   >
     <!----------------------------------------->
     <!----- Header Section ----->
     <!----------------------------------------->
-    <header class="bg-white sticky top-0 z-40">
+    <header
+      class="bg-white sticky left-0 right-0 top-0 z-40 transition-all duration-700"
+    >
       <div class="container">
         <div
           class="content py-3 lg:py-0 flex justify-between items-center text-slate-800"
         >
-          <div class="logo">
+          <a href="index.html" class="logo">
             <figure>
               <img class="w-[13rem]" src="./images/nav/logo.png" alt="logo" />
             </figure>
-          </div>
+          </a>
           <nav class="nav_large hidden lg:block h-full">
             <!-- Nav Large -->
             <ul class="lg:flex gap-12 font-bold capitalize h-full py-5">
@@ -81,36 +85,36 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 01</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 02</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 03</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 04</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4"
+                      >onepage home</a
                     >
                   </li>
                 </ul>
@@ -129,49 +133,49 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >about us</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >our team</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >team details</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >testimonials</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >faq's</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >gallery 1</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >gallery 2</a
                     >
                   </li>
@@ -191,49 +195,49 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Our Services</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Project Planning</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Residential Waters</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Commercial Waters</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Filtration Plants</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Water Softening</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Market Research</a
                     >
                   </li>
@@ -253,8 +257,86 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >feature block 1</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >feature block 2</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >about block 1</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >about block 2</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >services 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >services 02</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >news block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >team block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >team block 02</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >cta block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >pricing block</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >chooseus block</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -272,8 +354,30 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >shop</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >cart</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >checkout</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >my account</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -291,8 +395,16 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >blog grid</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >blog single</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -330,10 +442,18 @@
     <!----- Small Nav ----->
     <!----------------------------------------->
     <nav
-      class="nav_small 2xl:flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-50 transition-all duration-500"
-      x-bind:class="nav ? 'visible' : 'invisible' "
+      x-data="{toggleSub: false}"
+      class="nav_small 2xl:flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 bg-slate-900/50 z-50 transition-all duration-500"
+      x-bind:class="nav ? 'visible overflow-auto' : 'invisible' "
       x-cloak
     >
+      <button
+        class="absolute top-0 right-0 bottom-0 left-0"
+        @click="nav = !nav"
+        :aria-expanded="nav"
+        aria-controls="mobile-navigation"
+        aria-label="Close Navigation Menu"
+      ></button>
       <!-- floating -->
       <div
         x-bind:class="nav ? 'translate-x-0' : 'translate-x-full' "
@@ -343,141 +463,546 @@
           <img class="w-[10rem]" src="./images/footer/footer-logo.png" alt="" />
           <div
             x-on:click="nav = ! nav"
-            class="cross font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
+            class="cross fixed right-4 font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
           >
             <i class="fa-solid fa-xmark"></i>
           </div>
         </div>
-        <ul class="text-white uppercase py-2 flex flex-col items-start">
+        <ul
+          class="text-white uppercase py-2 flex flex-col items-start bg-default-small-nav"
+        >
+          <!-- Home -->
           <li
-            class="flex border-y-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
           >
-            <a
-              aria-current="true"
-              href="./index.html"
-              class="hover:text-cyan-400 transition-all duration-300"
-              >home</a
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >home</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'home'"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'home' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'home' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >home page 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >home page 02</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about</a
+                >
+              </li>
+            </ul>
           </li>
+
+          <!-- About -->
+          <li class="flex flex-col w-full trox">
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >pages</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'about'"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'about' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'about' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about us</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >our team</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >testimonials</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >faq's</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >gallery one</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >gallery two</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- services -->
           <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >services</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'services'"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'services' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'services' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >our services</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >residential water</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >commercial water</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >filtration plants</a
+                >
+              </li>
+
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >water softening</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >Market Research</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- elements -->
+          <li class="flex flex-col w-full trox">
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >elements</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'elements'"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'elements' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'elements' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >feature block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >feature block 02</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >services 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >news block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >team block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >cta block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >pricing block</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >chooseus block</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- shop -->
+          <li
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >shop</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'shop'"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'shop' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'shop' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >shop</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >cart</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >checkout</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >my account</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- blog -->
+          <li
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >blog</a
+              >
+              <!-- angle -->
+              <div
+                @click="toggleSub = 'blog' "
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="toggleSub === 'blog' ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="toggleSub === 'blog' ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog grid</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog standard</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog single</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- contact -->
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
           >
             <a
               href="./about.html"
               class="hover:text-cyan-400 transition-all duration-300"
-              >about</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >Services</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >elements</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >Shop</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >blog</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
               >contact</a
             >
           </li>
         </ul>
       </div>
-      <button
-        class="absolute top-0 right-0 bottom-0 left-0"
-        @click="nav = !nav"
-        :aria-expanded="nav"
-        aria-controls="mobile-navigation"
-        aria-label="Close Navigation Menu"
-      ></button>
     </nav>
     <!----------------------------------------->
     <!----- Main Section ----->
     <!----------------------------------------->
-    <main class="hero bg-default-dark-blue h-[840px] overflow-hidden">
-      <!-- Top bg -->
-      <div class="top_bg w-full">
-        <img
-          class="w-full absolute top-0 left-0 right-0"
-          src="./images/main/shape-1.png"
-          alt=""
-        />
-      </div>
-      <div class="hero_slider swiper relative h-full w-full">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide overflow-hidden flex items-center">
-            <!-- ****** Background Part ****** -->
-            <div class="bg_part">
-              <!-- Shadow bg -->
-              <div class="shadow_bg"></div>
-              <!-- Bottom bg -->
-              <div class="bottom w-full">
-                <img
-                  class="w-full absolute bottom-0 left-0 right-0"
-                  src="./images/main/banner-shap.png"
-                  alt=""
-                />
+    <main
+      class="hero bg-default-dark-blue h-[640px] sm:h-[700px] md:h-[940px] overflow-hidden relative"
+    >
+      <div class="wrapper w-full h-full max-w-[85rem] m-auto">
+        <!-- Top bg -->
+        <div
+          class="top_bg absolute left-0 top-0 w-full h-[160px] bg-no-repeat bg-center"
+        ></div>
+        <!-- Bottom bg -->
+        <div
+          class="bottom_bg w-full absolute left-0 bottom-0 h-[160px] bg-no-repeat bg-center"
+        ></div>
+        <!-- Slider -->
+        <div class="hero_slider swiper relative h-full w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide overflow-hidden flex items-center">
+              <!-- ****** Background Part ****** -->
+              <div class="bg_part">
+                <!-- Shadow bg -->
+                <div class="shadow_bg"></div>
+                <!--  BLOBS  -->
+                <div
+                  class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
+                ></div>
+                <!-- Large Blob -->
+                <div
+                  class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+                ></div>
               </div>
-              <!--  BLOBS  -->
-              <div
-                class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
-              ></div>
-              <!-- Large Blob -->
-              <div
-                class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
-              ></div>
-            </div>
 
-            <!-- ****** Main content ****** -->
-            <div
-              class="container z-20 text-white text-start lg:grid lg:grid-cols-2 gap-6"
-            >
-              <!-- Container bottle -->
+              <!-- ****** Main content ****** -->
               <div
-                class="large_bottle absolute h-[446px] w-[987px] right-0 hidden lg:flex"
+                class="container z-20 text-white text-start lg:grid lg:grid-cols-2 gap-6"
               >
-                <!-- water drop -->
-                <div class="water_drop">
-                  <img
-                    class="absolute h-full w-full"
-                    src="./images/main/vector-2.png"
-                    alt="water-drop"
-                  />
+                <!-- Container bottle -->
+                <div
+                  class="large_bottle absolute h-[446px] w-[987px] right-0 bottom-[174px] hidden lg:flex"
+                >
+                  <!-- water drop -->
+                  <div class="water_drop">
+                    <img
+                      class="absolute h-full w-full"
+                      src="./images/main/vector-2.png"
+                      alt="water-drop"
+                    />
+                  </div>
+                  <div class="bottle_img flex justify-center">
+                    <img
+                      class="w-[280px] h-[528px] absolute"
+                      src="./images/main/vector-1.png"
+                      alt="bottle"
+                    />
+                  </div>
                 </div>
-                <div class="bottle_img flex justify-center">
-                  <img
-                    class="w-[280px] h-[528px] absolute"
-                    src="./images/main/vector-1.png"
-                    alt="bottle"
-                  />
-                </div>
-              </div>
-              <div class="wrapper grid z-10">
-                <div class="content grid gap-4">
+                <div
+                  class="content flex flex-col justify-center gap-5 md:gap-10"
+                >
                   <div class="header flex justify-center">
-                    <h1 class="text-4xl xs:text-5xl md:text-6xl lg:text-7xl">
+                    <h1 class="text-3xl xs:text-4xl md:text-5xl lg:text-7xl">
                       Water Solutions with Highest Purity ensured
                     </h1>
                   </div>
@@ -488,17 +1013,17 @@
                     </p>
                   </div>
                   <!-- Buttons -->
-                  <div class="buttons flex gap-6">
+                  <div class="buttons flex flex-wrap gap-6">
                     <!-- blue button -->
                     <a
-                      class="mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white my-10 sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize bg-default-blue transition-all duration-500"
+                      class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
                       href="#"
                     >
                       <span class="relative z-50">our services</span>
                     </a>
                     <!-- White btn -->
                     <a
-                      class="mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white my-10 sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize border border-stone-200 transition-all duration-500"
+                      class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize border border-stone-200 transition-all duration-500 before:overflow-hidden"
                       href="#"
                     >
                       <span class="relative z-50">our services</span>
@@ -512,23 +1037,25 @@
       </div>
     </main>
     <!----------------------------------------->
-    <!----- * Section ----->
+    <!----- Overflow Section ----->
     <!----------------------------------------->
     <section
-      class="bg-white transform -translate-y-24 mx-10 px-4 py-16 drop-shadow-lg relative z-30"
+      class="overflow_section container"
     >
-      <div class="relative py-20">
+      <div class="relative  py-20 bg-white -translate-y-24 z-30 mx-2">
         <div
           class="content grid justify-center items-center gap-14 text-default-text-col"
         >
           <div class="header flex justify-center">
-            <h2 class="max-w-[30rem] wow animate__animated animate__bounce">
+            <h2 class="max-w-[30rem]">
               A Trusted Name In Bottled Water Industry
             </h2>
           </div>
           <div class="text grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="item_1 grid gap-4">
-              <h4 class="text-3xl font-normal capitalize font-spartan">
+              <h4
+                class="text-default-text-col text-2xl font-medium capitalize font-spartan"
+              >
                 Maxium Purity
               </h4>
               <span class="text-default-light-stone"
@@ -537,7 +1064,7 @@
             </div>
             <div class="item_2 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl font-medium capitalize font-spartan"
               >
                 Cholorine Free
               </h4>
@@ -547,7 +1074,7 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl font-medium capitalize font-spartan"
               >
                 5 Steps Filtration
               </h4>
@@ -557,9 +1084,9 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl font-medium capitalize font-spartan"
               >
-                Maxium Purity
+                Healthy Water
               </h4>
               <span class="text-default-light-stone"
                 >We maintain balanced PH level for healthiest water.
@@ -593,19 +1120,25 @@
           >
             <!-- item 1 -->
             <div
-              class="item p-6 max-h-[16rem] max-w-[20rem] h-full w-full border border-slate-500 grid bg-white drop-shadow-lg"
+              class="item wow fadeInLeft animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
-              <div class="icon justify-self-end">
-                <i
-                  class="fa-solid fa-bottle-water text-default-blue text-6xl pr-2"
-                ></i>
+              <div class="icon justify-self-end flex justify-end">
+                <!-- svg -->
+                <div class="img">
+                  <img
+                    class="max-w-[4rem]"
+                    src="./images/water/residential.svg"
+                    alt="residential"
+                  />
+                </div>
               </div>
-              <div class="text gap-4 flex flex-col text-end justify-center">
-                <h3
-                  class="hover:text-default-blue transition-all duration-300 text text-3xl font-normal"
+              <div class="text gap-4 flex flex-col text-end">
+                <a
+                  href="#"
+                  class="hover:text-default-blue transition-all duration-300 text text-2xl font-semibold"
                 >
                   Residential Waters
-                </h3>
+                </a>
                 <span class="text-stone-500 tex-lg"
                   >We deliver residential users water on multiple plan.</span
                 >
@@ -613,22 +1146,28 @@
             </div>
             <!-- item 2 -->
             <div
-              class="item p-6 max-h-[16rem] max-w-[20rem] h-full w-full border border-slate-500 grid gap-4 bg-white drop-shadow-lg"
+              class="item wow fadeInRight animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
-              <div class="icon justify-self-end">
-                <i
-                  class="fa-solid fa-bottle-water text-default-blue text-6xl pr-2"
-                ></i>
+              <div class="icon justify-self-start">
+                <!-- svg -->
+                <div class="img">
+                  <img
+                    class="max-w-[4rem]"
+                    src="./images/water/commercial.svg"
+                    alt="residential"
+                  />
+                </div>
               </div>
-              <div class="text gap-4 flex flex-col text-end justify-center">
-                <h3
-                  class="hover:text-default-blue transition-all duration-300 text text-3xl font-normal"
+              <div class="text gap-4 flex flex-col text-start">
+                <a
+                  href="#"
+                  class="hover:text-default-blue transition-all duration-300 text text-2xl font-semibold"
                 >
-                  Residential Waters
-                </h3>
+                  Commercial Waters
+                </a>
                 <span class="text-stone-500 tex-lg"
-                  >We deliver residential users water on multiple plan.</span
-                >
+                  >Our plants are ready for Water deliveries commercially.
+                </span>
               </div>
             </div>
           </div>
@@ -638,42 +1177,55 @@
           >
             <!-- item 1 -->
             <div
-              class="item p-6 max-h-[16rem] max-w-[20rem] h-full w-full border border-slate-500 grid gap-4 bg-white drop-shadow-lg"
+              class="item wow fadeInLeft animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
-              <div class="icon justify-self-end">
-                <i
-                  class="fa-solid fa-bottle-water text-default-blue text-6xl pr-2"
-                ></i>
+              <div class="icon justify-self-end flex justify-end">
+                <!-- svg -->
+                <div class="img">
+                  <img
+                    class="max-w-[4rem]"
+                    src="./images/water/purification.svg"
+                    alt="residential"
+                  />
+                </div>
               </div>
-              <div class="text gap-4 flex flex-col text-end justify-center">
-                <h3
-                  class="hover:text-default-blue transition-all duration-300 text text-3xl font-normal"
+              <div class="text gap-4 flex flex-col text-end">
+                <a
+                  href="#"
+                  class="hover:text-default-blue transition-all duration-300 text text-2xl font-semibold"
                 >
-                  Residential Waters
-                </h3>
+                  Filtration Plants
+                </a>
                 <span class="text-stone-500 tex-lg"
-                  >We deliver residential users water on multiple plan.</span
+                  >Reverse Osmosis filtering system ensures the best
+                  filtration.</span
                 >
               </div>
             </div>
             <!-- item 2 -->
             <div
-              class="item p-6 max-h-[16rem] max-w-[20rem] h-full w-full border border-slate-500 grid gap-4 bg-white drop-shadow-lg"
+              class="item wow fadeInRight animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
-              <div class="icon justify-self-end">
-                <i
-                  class="fa-solid fa-bottle-water text-default-blue text-6xl pr-2"
-                ></i>
+              <div class="icon justify-self-start">
+                <!-- svg -->
+                <div class="img">
+                  <img
+                    class="max-w-[4rem]"
+                    src="./images/water/softening.svg"
+                    alt="residential"
+                  />
+                </div>
               </div>
-              <div class="text gap-4 flex flex-col text-end justify-center">
-                <h3
-                  class="hover:text-default-blue transition-all duration-300 text text-3xl font-normal"
+              <div class="text gap-4 flex flex-col text-start">
+                <a
+                  href="#"
+                  class="hover:text-default-blue transition-all duration-300 text text-2xl font-semibold"
                 >
-                  Residential Waters
-                </h3>
+                  Waters Softening
+                </a>
                 <span class="text-stone-500 tex-lg"
-                  >We deliver residential users water on multiple plan.</span
-                >
+                  >PH balanced and Softened water ensures the healthy life.
+                </span>
               </div>
             </div>
           </div>
@@ -684,14 +1236,12 @@
     <!----- Protect Section ----->
     <!----------------------------------------->
     <section class="protect relative text-white pb-32 lg:mb-32 overflow-hidden">
-      <!-- All Content Wrapper -->
-      <!-- Protect bg -->
-      <div class="absolute top-0 left-0 protect_left_bg">
-        <img src="./images/protect/shape-6.png" alt="shape-6" />
-      </div>
-      <div
-        class="bg bg-protect-bg pb-20 bg-center bg-cover bg-no-repeat grid lg:grid-cols-7 pt-32"
-      >
+      <!-- backgrounds -->
+      <div class="all_bg">
+        <!-- Protect bg -->
+        <div class="absolute top-0 left-0 protect_left_bg">
+          <img src="./images/protect/shape-6.png" alt="shape-6" />
+        </div>
         <!-- BLOBS -->
         <div
           class="animated_blob absolute right-80 -top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
@@ -700,73 +1250,83 @@
         <div
           class="blob_large absolute -right-16 -top-20 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
         ></div>
-        <!-- Main Content -->
-        <div
-          class="col-span-3 px-10 lg:px-0 justify-self-end lg:translate-x-20 text-start"
-        >
-          <div
-            class="content flex flex-col gap-10 justify-center items-center lg:pb-20"
-          >
-            <div class="header">
-              <h3 class="text-[2.6rem] font-bold">
-                Don't hesitate to Protect Your Family with the Healthiest and
-                Purest water .
-              </h3>
-            </div>
-            <!-- Residential -->
+      </div>
+      <!-- ************************** -->
+      <div class="pb-20 bg-center bg-cover bg-no-repeat pt-32 bg-protect-bg">
+        <div class="container grid lg:grid-cols-7 justify-start">
+          <!-- Main Content -->
+          <div class="col-span-3 text-start">
             <div
-              class="residential ml-16 max-w-[30rem] md:max-w-[40.5rem] grid gap-2 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-7 md:before:-left-20 before:top-1/2 before:transform before:-translate-y-1/2"
+              class="content flex flex-col gap-10 justify-center items-center lg:pb-20"
             >
-              <h4 class="capitalize text-3xl font-spartan font-normal">
-                Most effective way
-              </h4>
-              <p class="text-lg">
-                We deliver water for residential users on several cost saving
-                plans like Monthly, yearly plans.
-              </p>
-            </div>
-            <!-- Commercial -->
-            <div
-              class="commercial ml-16 max-w-[30rem] md:max-w-[40.5rem] grid gap-2 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-7 md:before:-left-20 before:top-1/2 before:transform before:-translate-y-1/2"
-            >
-              <h4 class="capitalize text-3xl font-spartan font-normal">
-                Commercial Waters
-              </h4>
-              <p class="text-lg">
-                Specialities of our Commercial water is our plants are ready for
-                commercial level water deliveries.
-              </p>
+              <div class="header">
+                <h2 class="text-3xl sm:text-[2.5rem] leading-[1.3] font-bold">
+                  Don't hesitate to Protect Your Family with the Healthiest and
+                  Purest water .
+                </h2>
+              </div>
+              <!-- Residential -->
+              <div
+                class="residential ml-16 max-w-[30rem] md:max-w-[40.5rem] grid gap-2 relative"
+              >
+                <i
+                  class="fa-solid fa-check absolute text-slate-200 text-xl sm:text-2xl flex justify-center items-center h-10 w-10 md:h-14 md:w-14 bg-default-blue rounded-full -left-20 top-1/2 transform -translate-y-1/2"
+                ></i>
+                <h4 class="capitalize text-2xl font-spartan font-medium">
+                  Most effective way
+                </h4>
+                <p class="text-lg">
+                  Reverse Osmosis, the most effective way of eliminating water
+                  contaminants is used.
+                </p>
+              </div>
+              <!-- Commercial -->
+              <div
+                class="commercial ml-16 max-w-[30rem] md:max-w-[40.5rem] grid gap-2 relative"
+              >
+                <i
+                  class="fa-solid fa-check absolute text-slate-200 text-xl sm:text-2xl flex justify-center items-center h-10 w-10 md:h-14 md:w-14 bg-default-blue rounded-full -left-20 top-1/2 transform -translate-y-1/2"
+                ></i>
+                <h4 class="capitalize text-2xl font-spartan font-medium">
+                  Dissolved Substances Removed
+                </h4>
+                <p class="text-lg">
+                  Our filtration system is powerful enough that can even remove
+                  dissolved substances from the water.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Water Bottle img -->
-        <div
-          class="bottle_img px-6 md:px-0 md:translate-x-36 translate-y-20 lg:translate-y-44 col-span-4 w-full"
-        >
-          <img
-            class="border-[1rem] border-slate-50 w-full drop-shadow-xl"
-            src="./images/protect/bottle.jpg"
-            alt="bottle_img"
-          />
+          <!-- Water Bottle img -->
+          <div
+            class="bottle_img  md:translate-x-36 translate-y-20 lg:translate-y-64 col-span-4 w-full"
+          >
+            <img
+              class="wow fadeInRight animated border-[1rem] border-slate-50 w-full drop-shadow-xl"
+              src="./images/protect/bottle.jpg"
+              alt="bottle_img"
+            />
+          </div>
         </div>
       </div>
     </section>
     <!----------------------------------------->
-    <!----- Bottles Section ----->
+    <!----- Bottles Price Section ----->
     <!----------------------------------------->
-    <section class="py-16 bottles">
+    <section class="bottle_price py-16 bottles">
       <div class="container">
-        <div class="items grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Items -->
+        <div class="items wow fadeInUp animated grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- item 1 -->
           <div class="item grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
-                class="transform scale-95 transition-all duration-300"
+                class="transform scale-95 transition-all duration-500"
                 src="./images/Bottles/shop-1.jpg"
                 alt="bottle"
               />
             </div>
-            <div class="content grid gap-4">
+            <div class="content grid justify-center gap-4">
               <span class="text-stone-500">1L 3 Bottles</span>
               <!-- title -->
               <div class="title">
@@ -788,20 +1348,25 @@
               >
             </div>
             <!-- Btn -->
-            <div class="btn mt-6">
-              <a href="#" class="text-2xl font-semibold">our shop</a>
+            <div class="button flex justify-center">
+              <a
+                class="mt-6 btn py-3 sm:px-7 px-8 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
+                href="#"
+              >
+                <button class="relative z-20 capitalize">our shop</button>
+              </a>
             </div>
           </div>
           <!-- item 2 -->
           <div class="item grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
-                class="transform scale-95 transition-all duration-300"
+                class="transform scale-95 transition-all duration-500"
                 src="./images/Bottles/shop-2.jpg"
                 alt="bottle"
               />
             </div>
-            <div class="content grid gap-4">
+            <div class="content grid justify-center gap-4">
               <span class="text-stone-500">20L 2 Bottles</span>
               <!-- title -->
               <div class="title">
@@ -823,20 +1388,25 @@
               >
             </div>
             <!-- Btn -->
-            <div class="btn mt-6">
-              <a href="#" class="text-2xl font-semibold">our shop</a>
+            <div class="button flex justify-center">
+              <a
+                class="mt-6 btn py-3 sm:px-7 px-8 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
+                href="#"
+              >
+                <button class="relative z-20 capitalize">our shop</button>
+              </a>
             </div>
           </div>
           <!-- item 3 -->
           <div class="item grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
-                class="transform scale-95 transition-all duration-300"
+                class="transform scale-95 transition-all duration-500"
                 src="./images/Bottles/shop-1.jpg"
                 alt="bottle"
               />
             </div>
-            <div class="content grid gap-4">
+            <div class="content grid justify-center gap-4">
               <span class="text-stone-500">20L 5 Bottles</span>
               <!-- title -->
               <div class="title">
@@ -858,14 +1428,456 @@
               >
             </div>
             <!-- Btn -->
-            <div class="btn mt-6">
-              <a href="#" class="text-2xl font-semibold">our shop</a>
+            <div class="button flex justify-center">
+              <a
+                class="mt-6 btn py-3 sm:px-7 px-8 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
+                href="#"
+              >
+                <button class="relative z-20 capitalize">our shop</button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!----------------------------------------->
+    <!----- Client Section ----->
+    <!----------------------------------------->
+    <section class="py-16">
+      <div class="container">
+        <div class="content">
+          <div class="header flex justify-center">
+            <h2 class="text-default-text-col">
+              What Our Client are Saying About Acuasafe
+            </h2>
+          </div>
+          <div class="swiper client_slider py-20">
+            <div class="swiper-wrapper pt-10 pb-20">
+              <!-- Client 1 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-1.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
 
+                    <p class="text-lg">
+                      Outstanding Work!! Would suggest Acuasafe for both
+                      continuing service and emergency scenarios.
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>salesman</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>shop owner</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Client 2 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-2.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-lg">
+                      All of the Acuasafe technicians are very knowledgeable.
+                      They take their time on site and check over everything
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>Renne</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>shop owner</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Client 3 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-3.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-lg">
+                      After every visit, each technician on the Acuasafe
+                      communicates with us to let us know how things are doing
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>Samj</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>freelancer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Client 4 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-4.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-lg">
+                      Acuasafe not only was able to source the correct carbon
+                      but they were able to deliver it within time, was amazed
+                      by their activity
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>Nicolas Lawson</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>designer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Client 5 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-5.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-lg">
+                      Their expert Hands of the Technicians ensured our system
+                      is functioning effectively provides us peace of mind
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>Dina Watson</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>designer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Client 6 -->
+              <div class="swiper-slide">
+                <div class="team_1 flex gap-8 justify-center">
+                  <img
+                    class="rounded-full max-w-[100px] max-h-[100px]"
+                    src="./images/client/client-6.jpg"
+                    alt="appointment-1"
+                  />
+                  <div class="review grid gap-3">
+                    <div
+                      class="star flex gap-4 text-cyan-400 text-lg text-start"
+                    >
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-lg">
+                      Excellent Job!! would recommend Acuasafe not only in
+                      emergency situations, but for ongoing service too
+                    </p>
+
+                    <!-- Author -->
+                    <div class="author">
+                      <div
+                        class="name capitalize text-default-text-col font-semibold text-2xl"
+                      >
+                        <h4>Selena</h4>
+                      </div>
+
+                      <div class="position uppercase text-cyan-400">
+                        <span>Marketing Asst.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="client_pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------->
+    <!----- Team Section ----->
+    <!----------------------------------------->
+    <section class="md:mt-20 py-16">
+      <div class="container text-start">
+        <div class="content grid gap-12 items-center">
+          <div class="header justify-self-center text-center">
+            <h2 class="text-default-text-col">
+              Our Dedicated Team Members value Your Needs
+            </h2>
+          </div>
+          <!-- Team members -->
+          <div
+            class="members wow fadeInUp animated w-full grid sm:grid-cols-2 lg:grid-cols-3 justify-center gap-4 items-center px-6 sm:px-10"
+          >
+            <!-- Member 1 -->
+            <div class="member grid gap-6 justify-center">
+              <div class="img_wrapper relative">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
+                <img src="./images/members/member-1.jpg" alt="" />
+
+                <div
+                  class="icons absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-0 transition-all duration-500"
+                >
+                  <ul class="flex gap-3">
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Member Info -->
+              <div class="info flex flex-col justify-center items-center">
+                <a
+                  href="#"
+                  class="capitalize hover:text-default-blue transition-all duration-300 text-default-text-col text-3xl font-semibold"
+                >
+                  Md Sweem
+                </a>
+                <div
+                  class="position text-default-light-stone text-md font-semibold"
+                >
+                  <span class="uppercase">WATER TESTER</span>
+                </div>
+              </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="member grid gap-6 justify-center">
+              <div class="img_wrapper relative">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
+                <img src="./images/members/member-2.jpg" alt="" />
+
+                <div
+                  class="icons absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-0 transition-all duration-500"
+                >
+                  <ul class="flex gap-3">
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Member Info -->
+              <div class="info flex flex-col justify-center items-center">
+                <a
+                  href="#"
+                  class="capitalize hover:text-default-blue transition-all duration-300 text-default-text-col text-3xl font-semibold"
+                >
+                  Christian Bale
+                </a>
+                <div
+                  class="position text-default-light-stone text-md font-semibold"
+                >
+                  <span class="uppercase">WATER DELIVERY MAN</span>
+                </div>
+              </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="member grid gap-6 justify-center">
+              <div class="img_wrapper relative">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
+                <img src="./images/members/member-3.jpg" alt="" />
+
+                <div
+                  class="icons absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-0 transition-all duration-500"
+                >
+                  <ul class="flex gap-3">
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        class="hover:bg-default-blue flex justify-center items-center w-12 h-12 bg-stone-100 rounded-full text-xl hover:text-white transition-all duration-300"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Member Info -->
+              <div class="info flex flex-col justify-center items-center">
+                <a
+                  href="#"
+                  class="capitalize hover:text-default-blue transition-all duration-300 text-default-text-col text-3xl font-semibold"
+                >
+                  Hard Branots
+                </a>
+                <div
+                  class="position text-default-light-stone text-md font-semibold"
+                >
+                  <span class="uppercase">EXPRESS DELIVERY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!----------------------------------------->
     <!----- Service Section ----->
     <!----------------------------------------->
@@ -880,7 +1892,7 @@
           class="content z-20 grid md:grid-cols-2 gap-10 justify-center items-center"
         >
           <div class="bike_rider">
-            <img src="./images/service/bike-rider.png" alt="bike-rider" />
+            <img class="wow slideInLeft animated" src="./images/service/bike-rider.png" alt="bike-rider" />
           </div>
           <!-- Texts -->
           <div class="texts flex flex-col justify-center items-center gap-4">
@@ -893,8 +1905,18 @@
             </p>
             <!-- list -->
             <ul class="list grid gap-4 text-xl font-semibold font-spartan">
-              <li>Free Delivery</li>
-              <li>7 Days In A Week Service</li>
+              <li class="relative">
+                <i
+                  class="fa-solid fa-check absolute top-0 text-slate-200 text-sm flex justify-center items-center h-6 w-6 bg-slate-400/40 rounded-full -left-10 xs:-left-20 sm:-left-36"
+                ></i>
+                <span>Free Delivery</span>
+              </li>
+              <li class="relative">
+                <i
+                  class="fa-solid fa-check absolute top-0 text-slate-200 text-sm flex justify-center items-center h-6 w-6 bg-slate-400/40 rounded-full -left-10 xs:-left-20 sm:-left-36"
+                ></i>
+                <span>7 Days In A Week Service</span>
+              </li>
             </ul>
 
             <a
@@ -919,26 +1941,30 @@
     <!----------------------------------------->
     <!----- News Section ----->
     <!----------------------------------------->
-    <section class="py-20">
-      <div class="px-6">
-        <div class="content grid gap-10 custom_shadow">
+    <section class="news py-20">
+      <div class="px-6 container">
+        <div class="content grid gap-10 md:-mx-10">
           <div class="header flex justify-center">
             <h2>Stay Update with Acuasafe</h2>
           </div>
           <div
-            class="items grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0"
+            class="items wow fadeInUp animated grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0"
           >
             <!-- item 1 -->
             <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
-              <div class="img">
+              <div class="img relative overflow-hidden">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
                 <img
-                  class="w-full"
+                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
                   src="./images/news/news-1.jpg"
                   alt="news-1"
                 />
               </div>
               <div
-                class="texts p-4 flex flex-col gap-4 justify-center items-center"
+                class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
               >
                 <a
                   href="#"
@@ -947,9 +1973,12 @@
                 >
                 <!-- Title -->
                 <div class="title">
-                  <h3 class="text-3xl font-normal">
+                  <a
+                    href="#"
+                    class="text-2xl font-spartan font-semibold hover:text-default-blue transition-all duration-300"
+                  >
                     Carbonated (Sparkling) Water: Good or Bad?
-                  </h3>
+                  </a>
                 </div>
                 <!-- date -->
                 <div class="date w-full">
@@ -969,27 +1998,31 @@
                   ...
                 </p>
                 <!-- Btn -->
-                <button class="mt-6">
+                <div class="button flex justify-center justify-self-start">
                   <a
-                    class="text-white bg-cyan-400 rounded-full py-3 px-10 font-bold capitalize text-xl"
+                    class="mt-6 btn py-3 px-9 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
                     href="#"
                   >
-                    read more
+                    <button class="relative z-20 capitalize">read more</button>
                   </a>
-                </button>
+                </div>
               </div>
             </div>
             <!-- item 2 -->
             <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
-              <div class="img">
+              <div class="img relative overflow-hidden">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
                 <img
-                  class="w-full"
+                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
                   src="./images/news/news-2.jpg"
                   alt="news-1"
                 />
               </div>
               <div
-                class="texts p-4 flex flex-col gap-4 justify-center items-center"
+                class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
               >
                 <a
                   href="#"
@@ -998,9 +2031,12 @@
                 >
                 <!-- Title -->
                 <div class="title">
-                  <h3 class="text-3xl font-normal">
+                  <a
+                    href="#"
+                    class="text-2xl font-spartan font-semibold hover:text-default-blue transition-all duration-300"
+                  >
                     How Drinking More Water Can Help
-                  </h3>
+                  </a>
                 </div>
                 <!-- date -->
                 <div class="date w-full">
@@ -1019,27 +2055,31 @@
                   will become apparent. But it’s ... ...
                 </p>
                 <!-- Btn -->
-                <button class="mt-6">
+                <div class="button flex justify-center justify-self-start">
                   <a
-                    class="text-white bg-cyan-400 rounded-full py-3 px-10 font-bold capitalize text-xl"
+                    class="mt-6 btn py-3 px-9 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
                     href="#"
                   >
-                    read more
+                    <button class="relative z-20 capitalize">read more</button>
                   </a>
-                </button>
+                </div>
               </div>
             </div>
             <!-- item 3 -->
             <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
-              <div class="img">
+              <div class="img relative overflow-hidden">
+                <!-- hover img bg -->
+                <div
+                  class="hover_img absolute -inset-0 transition-all duration-300"
+                ></div>
                 <img
-                  class="w-full"
+                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
                   src="./images/news/news-3.jpg"
                   alt="news-1"
                 />
               </div>
               <div
-                class="texts p-4 flex flex-col gap-4 justify-center items-center"
+                class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
               >
                 <a
                   href="#"
@@ -1048,9 +2088,12 @@
                 >
                 <!-- Title -->
                 <div class="title">
-                  <h3 class="text-3xl font-normal">
+                  <a
+                    href="#"
+                    class="text-2xl font-spartan font-semibold hover:text-default-blue transition-all duration-300"
+                  >
                     Why does the ice floats in water?
-                  </h3>
+                  </a>
                 </div>
                 <!-- date -->
                 <div class="date w-full">
@@ -1070,26 +2113,239 @@
                   ...
                 </p>
                 <!-- Btn -->
-                <button class="mt-6">
+                <div class="button flex justify-center justify-self-start">
                   <a
-                    class="text-white bg-cyan-400 rounded-full py-3 px-10 font-bold capitalize text-xl"
+                    class="mt-6 btn py-3 px-9 relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-blue before:transform-all before:duration-700 text-xl overflow-hidden hover:text-white rounded-full font-bold capitalize bg-white transition-all duration-500 z-10 text-default-text-col border-2 border-transparent hover:border-default-blue"
                     href="#"
                   >
-                    read more
+                    <button class="relative z-20 capitalize">read more</button>
                   </a>
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!----------------------------------------->
+    <!----- Footer Section ----->
+    <!----------------------------------------->
+    <footer class="overflow-hidden bg-default-footer-bg mt-20 text-white">
+      <div class="footer_curbe_bg">
+        <img class="" src="./images/footer/footer.png" alt="" />
+      </div>
+      <!-- Footer Top -->
+      <div class="container footer_top">
+        <!-- Contact -->
+        <div
+          class="contact mt-20 sm:mt-28 md:mt-40 flex justify-center md:justify-between items-center flex-wrap gap-6"
+        >
+          <h1 class="text-2xl sm:text-3xl text-semibold">
+            Please <span class="text-default-blue">Call Us</span> to Take an
+            Extraordinary Service
+          </h1>
+          <button class="">
+            <a
+              href="tel:http://(773)%20225-3523"
+              class="text-white bg-cyan-400 rounded-full py-3 px-8 sm:py-5 sm:px-10 text-lg sm:text-xl flex justify-center items-center gap-4"
+              ><i class="fas fa-phone"></i>(773) 225-3523</a
+            >
+          </button>
+        </div>
+        <!-- footer line -->
+        <div class="footer_line justify-center my-20">
+          <img src="./images/footer/footer-line.png" alt="" />
+        </div>
+      </div>
+      <!-- Footer Main -->
+      <div class="footer_main relative">
+        <div
+          class="content container grid sm:grid-cols-2 lg:grid-cols-4 gap-8 z-20 relative"
+        >
+          <!-- item 1 -->
+          <div class="item_1 flex flex-col gap-8 text-start">
+            <a href="#" class="footer_logo">
+              <img
+                class="max-w-[12rem]"
+                src="./images/footer/footer-logo.png"
+                alt="footer-logo"
+              />
+            </a>
+            <!-- text container -->
+            <div class="text">
+              <span class="text-lg"
+                >Delivering the Purest Water for a Healthy life</span
+              >
+              <!-- Open hour -->
+              <div class="open_hour grid gap-4">
+                <h3 class="text-lg font-semibold capit">Open Hours:</h3>
+                <!-- Time -->
+                <span class="time">Mon - Sat: 9AM - 6PM.</span>
+              </div>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div class="item_2 flex flex-col gap-8 text-start lg:ml-8">
+            <div class="header pt-2">
+              <h3 class="text-2xl font-semibold capitalize">Address</h3>
+            </div>
+            <!-- Info list -->
+            <ul class="info-list grid gap-6">
+              <li class="flex gap-6 text-lg items-center">
+                <i class="text-default-blue fal fa fa-map-marker-alt"></i>
+                <span>Flat 20, Reynolds Neck, FV77 8WS</span>
+              </li>
+              <li class="flex gap-6 text-lg items-center">
+                <i class="text-default-blue fal fa fa-phone"></i>
+                <span>Call Us: 333-666-0001</span>
+              </li>
+              <li class="flex gap-6 text-lg items-center">
+                <i class="text-default-blue fal fa fa-envelope-open-text"></i
+                ><span>info@example.com</span>
+              </li>
+            </ul>
+          </div>
+          <!-- item 3 -->
+          <div class="item_3 flex flex-col gap-8 text-start lg:ml-14">
+            <div class="header pt-2">
+              <h3 class="text-2xl font-semibold capitalize">Usefull Link</h3>
+            </div>
+            <!-- Links list -->
+            <ul class="links-list grid gap-4">
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Market Research</a>
+              </li>
+              <li>
+                <a href="#">Our Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Item-4 -->
+          <div class="item_4 flex flex-col gap-8 text-start">
+            <div class="header pt-2">
+              <h3 class="text-2xl font-semibold capitalize">Subscribe</h3>
+            </div>
+            <!-- Lorem -->
+            <div class="content grid gap-6">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- Email Input -->
+            <div
+              class="flex bg-slate-100 text-slate-900 border rounded-full overflow-hidden max-w-[18rem]"
+            >
+              <span
+                ><input
+                  type="email"
+                  value=""
+                  size="40"
+                  class="input w-full h-full border-none focus: bg-transparent placeholder:select-none placeholder:text-slate-400 py-4 pl-5 focus:outline-none focus:border-4 focus:border-l-default-blue focus:border-y-default-blue focus:ring-1 focus:ring-sky-500 disabled:bg-white disabled:text-white0 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-bl-full rounded-tl-full"
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Your Email"
+              /></span>
+              <button
+                class="px-4 bg-default-blue text-white border-l rounded-tr-md border-tr"
+                type="submit"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom bg -->
+        <div class="footer_bottom_bg absolute -bottom-10">
+          <img
+            class="w-[200vw]"
+            src="./images/footer/footer-bottom.png"
+            alt="footer-bottom"
+          />
+        </div>
+      </div>
+      <!-- Footer bottom -->
+      <div class="footer_bottom bg-default-footer-bottom z-10">
+        <div class="container">
+          <div
+            class="content py-10 mt-10 flex flex-col md:flex-row gap-4 justify-between items-center"
+          >
+            <!-- Copyright -->
+            <div class="copyright">
+              <p>
+                <a
+                  href="#"
+                  class="text-default-blue border-b-2 border-transparent hover:border-default-blue"
+                  >Acuasafe</a
+                >
+                © 2022 All Right Reserved
+              </p>
+            </div>
+            <!-- Link Icons -->
+            <div class="link_icons">
+              <ul class="flex gap-4 text-md">
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white/30 hover:bg-default-blue transition-all duration-300 hover:text-white"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white/30 hover:bg-default-blue transition-all duration-300 hover:text-white"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white/30 hover:bg-default-blue transition-all duration-300 hover:text-white"
+                    ><i class="fa-brands fa-google-plus-g"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex justify-center items-center rounded-full bg-white/30 hover:bg-default-blue transition-all duration-300 hover:text-white"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Terms & Policy -->
+            <div class="wrapper flex gap-4">
+              <a
+                href="#"
+                class="hover:text-default-blue transition-all duration-200"
+                >Terms of Service</a
+              >
+              <span>|</span>
+              <a
+                href="#"
+                class="hover:text-default-blue transition-all duration-200"
+                >Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- overlay -->
     <div
       @click="nav = false"
       x-bind:class="nav ? 'bg-black/70 z-[30]' : '-z-10'"
       class="overlay absolute inset-0 transition-all duration-800"
     ></div>
+    <div class="hidden py-20"></div>
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Wow js -->

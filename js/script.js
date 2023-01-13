@@ -1,3 +1,21 @@
+
+const nav = document.querySelector("header");
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    nav.classList.add('drop-shadow-lg')
+  } else {
+    nav.classList.remove("drop-shadow-lg");
+
+  }
+})
+
+
+
+
+
+
+
+
 var swiper = new Swiper(".client_slider", {
   slidesPerView: 0,
   loop: true,
