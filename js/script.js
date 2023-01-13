@@ -17,3 +17,10 @@ var swiper = new Swiper(".client_slider", {
     },
   },
 });
+
+var heroSwiper = new Swiper(".hero_slider", {
+  speed: 1000,
+  spaceBetween: 100,
+  slidesPerView: 1,
+  loop: true,
+});
