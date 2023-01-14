@@ -31,11 +31,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <!-- Anime.js -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    /> -->
 
     <link rel="stylesheet" href="./css/animate.css" />
     <!-- Main CSS -->
@@ -122,7 +117,7 @@
               <!-- pages -->
               <li class="h-full parent_li">
                 <a
-                  href="about.html"
+                  href="./about.html"
                   class="hover:text-cyan-400 transition-all duration-300 py-5"
                   >pages</a
                 >
@@ -428,8 +423,29 @@
             <div class="w-8 h-[2px] bg-slate-900"></div>
           </div>
           <!-- Icons -->
-          <div class="hidden lg:flex icons gap-10 text-lg">
-            <i class="cursor-pointer fa-solid fa-magnifying-glass"></i>
+          <div
+            x-data="{open : false}"
+            class="hidden lg:flex icons gap-10 text-xl relative"
+          >
+            <i
+              @click="open = !open"
+              class="cursor-pointer fa-solid fa-magnifying-glass"
+            ></i>
+            <div
+            x-cloak
+              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
+              class="search_input absolute flex justify-center items-center px-4 bg-slate-50 backdrop-blur-2xl top-12 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
+            >
+              <input
+                type="text"
+                class="input w-full h-16 border-none focus:outline-none bg-transparent placeholder:text-sm placeholder:select-none placeholder:text-slate-500"
+                placeholder="Search..."
+              />
+              <i
+                @click="open = !open"
+                class="cursor-pointer fa-solid fa-magnifying-glass"
+              ></i>
+            </div>
             <a href="#" class="flex items-center">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
@@ -444,7 +460,7 @@
     <nav
       x-data="{toggleSub: false}"
       class="nav_small 2xl:flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 bg-slate-900/50 z-50 transition-all duration-500"
-      x-bind:class="nav ? 'visible overflow-auto' : 'invisible' "
+      x-bind:class="nav ? 'visible ' : 'invisible' "
       x-cloak
     >
       <button
@@ -456,7 +472,7 @@
       ></button>
       <!-- floating -->
       <div
-        x-bind:class="nav ? 'translate-x-0' : 'translate-x-full' "
+        x-bind:class="nav ? 'translate-x-0 overflow-auto' : 'translate-x-full' "
         class="wrapper absolute top-0 right-0 bottom-0 transform transition-all duration-1000 bg-default-small-nav w-72"
       >
         <div class="logo py-10 px-6 flex justify-between items-center">
@@ -473,6 +489,7 @@
         >
           <!-- Home -->
           <li
+            x-data="{open: false}"
             class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
           >
             <!-- nav expand -->
@@ -484,11 +501,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'home'"
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'home' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -496,7 +513,7 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'home' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
@@ -530,7 +547,7 @@
           </li>
 
           <!-- About -->
-          <li class="flex flex-col w-full trox">
+          <li x-data="{open: false}" class="flex flex-col w-full trox">
             <!-- nav expand -->
             <div class="flex justify-between items-center w-full px-4 py-2">
               <a
@@ -540,11 +557,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'about'"
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'about' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -552,14 +569,14 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'about' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
                 class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
               >
                 <a
-                  href="#"
+                  href="about.html"
                   class="hover:text-cyan-400 transition-all duration-300"
                   >about us</a
                 >
@@ -613,6 +630,7 @@
           </li>
           <!-- services -->
           <li
+            x-data="{open: false}"
             class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
           >
             <!-- nav expand -->
@@ -624,11 +642,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'services'"
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'services' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -636,7 +654,7 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'services' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
@@ -697,7 +715,7 @@
             </ul>
           </li>
           <!-- elements -->
-          <li class="flex flex-col w-full trox">
+          <li x-data="{open: false}" class="flex flex-col w-full trox">
             <!-- nav expand -->
             <div class="flex justify-between items-center w-full px-4 py-2">
               <a
@@ -707,11 +725,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'elements'"
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'elements' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -719,7 +737,7 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'elements' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
@@ -807,6 +825,7 @@
           </li>
           <!-- shop -->
           <li
+            x-data="{open: false}"
             class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
           >
             <!-- nav expand -->
@@ -818,11 +837,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'shop'"
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'shop' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -830,7 +849,7 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'shop' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
@@ -873,7 +892,8 @@
           </li>
           <!-- blog -->
           <li
-            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+            x-data="{open: false}"
+            class="flex flex-col border-b-[1px] border-stone-600/40 w-full trox"
           >
             <!-- nav expand -->
             <div class="flex justify-between items-center w-full px-4 py-2">
@@ -884,11 +904,11 @@
               >
               <!-- angle -->
               <div
-                @click="toggleSub = 'blog' "
+                @click="open = !open"
                 class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
               >
                 <i
-                  :class="toggleSub === 'blog' ? 'rotate-90' : 'rotate-0' "
+                  :class="open ? 'rotate-90' : 'rotate-0' "
                   class="fa-solid fa-angle-down transition-all duration-300"
                 ></i>
               </div>
@@ -896,7 +916,7 @@
 
             <!-- Sub menu -->
             <ul
-              :class="toggleSub === 'blog' ? 'max-h-[500px]' : 'max-h-0' "
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
               class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
               <li
@@ -930,13 +950,65 @@
           </li>
           <!-- contact -->
           <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-4 capitalize trox"
           >
             <a
               href="./about.html"
               class="hover:text-cyan-400 transition-all duration-300"
               >contact</a
             >
+          </li>
+
+          <li>
+            <div
+              class="address bg-default-small-nav mt-10 ml-4 grid gap-4 text-start"
+            >
+              <h3 class="capitalize text-xl">Our Address</h3>
+              <ul class="text-sm normal-case gap gap-1">
+                <li>House 35 R/A,Street</li>
+
+                <li><a href="tel:#">+357 984538</a></li>
+
+                <li><a href="#">e-mail us</a></li>
+              </ul>
+              <ul class="flex gap-4 text-md">
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-pinterest"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -945,7 +1017,7 @@
     <!----- Main Section ----->
     <!----------------------------------------->
     <main
-      class="hero bg-default-dark-blue h-[640px] sm:h-[700px] md:h-[940px] overflow-hidden relative"
+      class="hero bg-default-dark-blue h-[640px] sm:h-[700px] md:h-[880px] overflow-hidden relative"
     >
       <div class="wrapper w-full h-full max-w-[85rem] m-auto">
         <!-- Top bg -->
@@ -976,11 +1048,11 @@
 
               <!-- ****** Main content ****** -->
               <div
-                class="container z-20 text-white text-start lg:grid lg:grid-cols-2 gap-6"
+                class="container hero_content_down_animation z-20 text-white text-start lg:grid lg:grid-cols-2 gap-6"
               >
                 <!-- Container bottle -->
                 <div
-                  class="large_bottle absolute h-[446px] w-[987px] right-0 bottom-[174px] hidden lg:flex"
+                  class="large_bottle bottle_animation opacity-0 absolute h-[446px] w-[987px] right-0 bottom-[174px] hidden lg:flex"
                 >
                   <!-- water drop -->
                   <div class="water_drop">
@@ -998,22 +1070,27 @@
                     />
                   </div>
                 </div>
+                <!-- Contents -->
                 <div
-                  class="content flex flex-col justify-center gap-5 md:gap-10"
+                  class="content content_down_animation flex flex-col justify-center gap-5 md:gap-10"
                 >
                   <div class="header flex justify-center">
-                    <h1 class="text-3xl xs:text-4xl md:text-5xl lg:text-7xl">
+                    <h1
+                      class="heading_animation animated opacity-0 text-3xl xs:text-4xl md:text-5xl lg:text-7xl"
+                    >
                       Water Solutions with Highest Purity ensured
                     </h1>
                   </div>
-                  <div class="text">
+                  <div class="text text_up_animation animated opacity-0">
                     <p>
                       We have the facility to ensure the highest purity as we
                       use the Top class equipments.
                     </p>
                   </div>
                   <!-- Buttons -->
-                  <div class="buttons flex flex-wrap gap-6">
+                  <div
+                    class="buttons button_up_animation animated opacity-0 flex flex-wrap gap-6"
+                  >
                     <!-- blue button -->
                     <a
                       class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
@@ -1039,12 +1116,10 @@
     <!----------------------------------------->
     <!----- Overflow Section ----->
     <!----------------------------------------->
-    <section
-      class="overflow_section container"
-    >
-      <div class="relative  py-20 bg-white -translate-y-24 z-30 mx-2">
+    <section class="overflow_section container">
+      <div class="relative py-20 bg-white -translate-y-24 z-30">
         <div
-          class="content grid justify-center items-center gap-14 text-default-text-col"
+          class="content wow animated fadeInLeft grid justify-center items-center gap-14 text-default-text-col"
         >
           <div class="header flex justify-center">
             <h2 class="max-w-[30rem]">
@@ -1096,6 +1171,58 @@
         </div>
       </div>
     </section>
+
+    <!----------------------------------------->
+    <!----- About Section ----->
+    <!----------------------------------------->
+    <section class="about py-16">
+      <div class="container">
+        <div
+          class="content grid md:grid-cols-2 justify-between gap-10 md:gap-16"
+        >
+          <div class="image md:-ml-20 wow fadeInLeft animated">
+            <img
+              class="max-w-[42rem] w-full"
+              src="./images/about/about-1.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="text flex flex-col justify-center items-center gap-6 text-center py-10 wow fadeInRight animated"
+          >
+            <h2 class="font-bold text-default-text-col">
+              We Always Want Safe and Healthy Water for Healthy Life.
+            </h2>
+            <div class="pera grid gap-6 md:gap-8 text-stone-500">
+              <p>
+                We know that as water is the most essential element for all
+                living beings, not only humans, and you have to take it
+                regularly, you are searching for the best quality water
+                consisting of natural PH balance and teste. Without these
+                criteria, your health may be in danger sooner or later.
+              </p>
+              <p>
+                We the Acuasafe team ensure you the purest and healthiest water
+                for daily life with the affordable price. Our QC team regularly
+                monitors and checkup the water quality ensuring you get the best
+                quality.
+              </p>
+            </div>
+            <!-- Btn -->
+            <button
+              class="max-w-[12rem] mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-dark-blue my-8 bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden"
+            >
+              <a
+                href="#"
+                class="capitalize relative text-white font-semibold z-20"
+              >
+                services
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!----------------------------------------->
     <!----- Water Section ----->
     <!----------------------------------------->
@@ -1120,7 +1247,7 @@
           >
             <!-- item 1 -->
             <div
-              class="item wow fadeInLeft animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
+              class="item wow fadeInLeft animated p-6 h-[18rem] max-w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
               <div class="icon justify-self-end flex justify-end">
                 <!-- svg -->
@@ -1146,7 +1273,7 @@
             </div>
             <!-- item 2 -->
             <div
-              class="item wow fadeInRight animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
+              class="item wow fadeInRight animated p-6 h-[18rem] max-w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
               <div class="icon justify-self-start">
                 <!-- svg -->
@@ -1177,7 +1304,7 @@
           >
             <!-- item 1 -->
             <div
-              class="item wow fadeInLeft animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
+              class="item wow fadeInLeft animated p-6 h-[18rem] max-w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
               <div class="icon justify-self-end flex justify-end">
                 <!-- svg -->
@@ -1204,7 +1331,7 @@
             </div>
             <!-- item 2 -->
             <div
-              class="item wow fadeInRight animated p-6 h-[18rem] w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
+              class="item wow fadeInRight animated p-6 h-[18rem] max-w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-white drop-shadow-lg transition-all duration-500 hover:-translate-y-3"
             >
               <div class="icon justify-self-start">
                 <!-- svg -->
@@ -1235,7 +1362,7 @@
     <!----------------------------------------->
     <!----- Protect Section ----->
     <!----------------------------------------->
-    <section class="protect relative text-white pb-32 lg:mb-32 overflow-hidden">
+    <section class="protect relative text-white pb-28 overflow-hidden">
       <!-- backgrounds -->
       <div class="all_bg">
         <!-- Protect bg -->
@@ -1260,7 +1387,7 @@
               class="content flex flex-col gap-10 justify-center items-center lg:pb-20"
             >
               <div class="header">
-                <h2 class="text-3xl sm:text-[2.5rem] leading-[1.3] font-bold">
+                <h2 class="font-bold">
                   Don't hesitate to Protect Your Family with the Healthiest and
                   Purest water .
                 </h2>
@@ -1299,7 +1426,7 @@
           </div>
           <!-- Water Bottle img -->
           <div
-            class="bottle_img  md:translate-x-36 translate-y-20 lg:translate-y-64 col-span-4 w-full"
+            class="bottle_img md:translate-x-36 translate-y-20 lg:translate-y-64 col-span-4 w-full"
           >
             <img
               class="wow fadeInRight animated border-[1rem] border-slate-50 w-full drop-shadow-xl"
@@ -1316,7 +1443,9 @@
     <section class="bottle_price py-16 bottles">
       <div class="container">
         <!-- Items -->
-        <div class="items wow fadeInUp animated grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="items wow fadeInUp animated grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           <!-- item 1 -->
           <div class="item grid justify-center">
             <div class="bottle_img flex justify-center">
@@ -1892,7 +2021,11 @@
           class="content z-20 grid md:grid-cols-2 gap-10 justify-center items-center"
         >
           <div class="bike_rider">
-            <img class="wow slideInLeft animated" src="./images/service/bike-rider.png" alt="bike-rider" />
+            <img
+              class="wow slideInLeft animated"
+              src="./images/service/bike-rider.png"
+              alt="bike-rider"
+            />
           </div>
           <!-- Texts -->
           <div class="texts flex flex-col justify-center items-center gap-4">
@@ -2213,7 +2346,7 @@
             <!-- Links list -->
             <ul class="links-list grid gap-4">
               <li>
-                <a href="#">About Us</a>
+                <a href="./about.html">About Us</a>
               </li>
               <li>
                 <a href="#">Services</a>
@@ -2345,7 +2478,8 @@
       x-bind:class="nav ? 'bg-black/70 z-[30]' : '-z-10'"
       class="overlay absolute inset-0 transition-all duration-800"
     ></div>
-    <div class="hidden py-20"></div>
+    <!-- Import Class -->
+    <div class="hidden py-20 h-16"></div>
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Wow js -->

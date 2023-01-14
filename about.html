@@ -44,21 +44,24 @@
 
   <body
     x-data="{nav: false}"
+    :class="nav ? 'overflow-hidden' : 'overflow-visible'"
     class="text-md text-center text-slate-900 w-full h-full relative overflow-x-hidden"
   >
     <!----------------------------------------->
     <!----- Header Section ----->
     <!----------------------------------------->
-    <header class="bg-white sticky top-0 z-40">
+    <header
+      class="bg-white sticky left-0 right-0 top-0 z-40 transition-all duration-700"
+    >
       <div class="container">
         <div
           class="content py-3 lg:py-0 flex justify-between items-center text-slate-800"
         >
-          <div class="logo">
+          <a href="index.html" class="logo">
             <figure>
               <img class="w-[13rem]" src="./images/nav/logo.png" alt="logo" />
             </figure>
-          </div>
+          </a>
           <nav class="nav_large hidden lg:block h-full">
             <!-- Nav Large -->
             <ul class="lg:flex gap-12 font-bold capitalize h-full py-5">
@@ -76,36 +79,36 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 01</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 02</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 03</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >home page 04</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="./index.html"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                      >home</a
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4"
+                      >onepage home</a
                     >
                   </li>
                 </ul>
@@ -113,7 +116,7 @@
               <!-- pages -->
               <li class="h-full parent_li">
                 <a
-                  href="about.html"
+                  href="./about.html"
                   class="hover:text-cyan-400 transition-all duration-300 py-5"
                   >pages</a
                 >
@@ -124,49 +127,49 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >about us</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >our team</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >team details</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >testimonials</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >faq's</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >gallery 1</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >gallery 2</a
                     >
                   </li>
@@ -186,49 +189,49 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Our Services</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Project Planning</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Residential Waters</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Commercial Waters</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Filtration Plants</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Water Softening</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
                       >Market Research</a
                     >
                   </li>
@@ -248,8 +251,86 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >feature block 1</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >feature block 2</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >about block 1</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >about block 2</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >services 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >services 02</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >news block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >team block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >team block 02</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >cta block 01</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >pricing block</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >chooseus block</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -267,8 +348,30 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >shop</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >cart</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >checkout</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >my account</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -286,8 +389,16 @@
                   <li class="w-72 flex justify-start">
                     <a
                       href="#"
-                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-white/40"
-                    ></a>
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >blog grid</a
+                    >
+                  </li>
+                  <li class="w-72 flex justify-start">
+                    <a
+                      href="#"
+                      class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
+                      >blog single</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -311,8 +422,29 @@
             <div class="w-8 h-[2px] bg-slate-900"></div>
           </div>
           <!-- Icons -->
-          <div class="hidden lg:flex icons gap-10 text-lg">
-            <i class="cursor-pointer fa-solid fa-magnifying-glass"></i>
+          <div
+            x-data="{open : false}"
+            class="hidden lg:flex icons gap-10 text-xl relative"
+          >
+            <i
+              @click="open = !open"
+              class="cursor-pointer fa-solid fa-magnifying-glass"
+            ></i>
+            <div
+              x-cloak
+              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
+              class="search_input absolute flex justify-center items-center px-4 bg-slate-50 backdrop-blur-2xl top-12 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
+            >
+              <input
+                type="text"
+                class="input w-full h-16 border-none focus:outline-none bg-transparent placeholder:text-sm placeholder:select-none placeholder:text-slate-500"
+                placeholder="Search..."
+              />
+              <i
+                @click="open = !open"
+                class="cursor-pointer fa-solid fa-magnifying-glass"
+              ></i>
+            </div>
             <a href="#" class="flex items-center">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
@@ -325,8 +457,9 @@
     <!----- Small Nav ----->
     <!----------------------------------------->
     <nav
-      class="nav_small 2xl:flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-50 transition-all duration-500"
-      x-bind:class="nav ? 'visible' : 'invisible' "
+      x-data="{toggleSub: false}"
+      class="nav_small 2xl:flex justify-between px-10 fixed top-0 right-0 bottom-0 left-0 bg-slate-900/50 z-50 transition-all duration-500"
+      x-bind:class="nav ? 'visible ' : 'invisible' "
       x-cloak
     >
       <button
@@ -338,85 +471,556 @@
       ></button>
       <!-- floating -->
       <div
-        x-bind:class="nav ? 'translate-x-0' : 'translate-x-full' "
+        x-bind:class="nav ? 'translate-x-0 overflow-auto' : 'translate-x-full' "
         class="wrapper absolute top-0 right-0 bottom-0 transform transition-all duration-1000 bg-default-small-nav w-72"
       >
         <div class="logo py-10 px-6 flex justify-between items-center">
           <img class="w-[10rem]" src="./images/footer/footer-logo.png" alt="" />
           <div
             x-on:click="nav = ! nav"
-            class="cross font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
+            class="cross fixed right-4 font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
           >
             <i class="fa-solid fa-xmark"></i>
           </div>
         </div>
-        <ul class="text-white uppercase py-2 flex flex-col items-start">
+        <ul
+          class="text-white uppercase py-2 flex flex-col items-start bg-default-small-nav"
+        >
+          <!-- Home -->
           <li
-            class="flex border-y-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+            x-data="{open: false}"
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
           >
-            <a
-              aria-current="true"
-              href="./index.html"
-              class="hover:text-cyan-400 transition-all duration-300"
-              >home</a
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >home</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
             >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >home page 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >home page 02</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about</a
+                >
+              </li>
+            </ul>
           </li>
+
+          <!-- About -->
+          <li x-data="{open: false}" class="flex flex-col w-full trox">
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >pages</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about us</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >our team</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >testimonials</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >faq's</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >gallery one</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >gallery two</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- services -->
           <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
+            x-data="{open: false}"
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >services</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >our services</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >residential water</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >commercial water</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >filtration plants</a
+                >
+              </li>
+
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >water softening</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >Market Research</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- elements -->
+          <li x-data="{open: false}" class="flex flex-col w-full trox">
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >elements</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >feature block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >feature block 02</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >about block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >services 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >news block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >team block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >cta block 01</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >pricing block</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >chooseus block</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- shop -->
+          <li
+            x-data="{open: false}"
+            class="flex flex-col border-y-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >shop</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >shop</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >cart</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >checkout</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >my account</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- blog -->
+          <li
+            x-data="{open: false}"
+            class="flex flex-col border-b-[1px] border-stone-600/40 w-full trox"
+          >
+            <!-- nav expand -->
+            <div class="flex justify-between items-center w-full px-4 py-2">
+              <a
+                href="./index.html"
+                class="hover:text-cyan-400 transition-all duration-300 w-full flex"
+                >blog</a
+              >
+              <!-- angle -->
+              <div
+                @click="open = !open"
+                class="angle p-2 bg-white/20 rounded-sm cursor-pointer"
+              >
+                <i
+                  :class="open ? 'rotate-90' : 'rotate-0' "
+                  class="fa-solid fa-angle-down transition-all duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sub menu -->
+            <ul
+              :class="open ? 'max-h-[500px]' : 'max-h-0' "
+              class="overflow-hidden transform transition-all duration-1000 bg-slate-600/10"
+            >
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog grid</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="#"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog standard</a
+                >
+              </li>
+              <li
+                class="flex border-t-[1px] border-stone-600/40 py-2 w-full pl-10 capitalize trox"
+              >
+                <a
+                  href="./about.html"
+                  class="hover:text-cyan-400 transition-all duration-300"
+                  >blog single</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- contact -->
+          <li
+            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-4 capitalize trox"
           >
             <a
               href="./about.html"
               class="hover:text-cyan-400 transition-all duration-300"
-              >about</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >Services</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >elements</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >Shop</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
-              >blog</a
-            >
-          </li>
-          <li
-            class="flex border-b-[1px] border-stone-600/40 py-2 w-full pl-6 trox"
-          >
-            <a href="#" class="hover:text-cyan-400 transition-all duration-300"
               >contact</a
             >
+          </li>
+
+          <li>
+            <div
+              class="address bg-default-small-nav mt-10 ml-4 grid gap-4 text-start"
+            >
+              <h3 class="capitalize text-xl">Our Address</h3>
+              <ul class="text-sm normal-case gap gap-1">
+                <li>House 35 R/A,Street</li>
+
+                <li><a href="tel:#">+357 984538</a></li>
+
+                <li><a href="#">e-mail us</a></li>
+              </ul>
+              <ul class="flex gap-4 text-md">
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-pinterest"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition-all text-white hover:text-default-blue"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </nav>
 
     <!----------------------------------------->
-    <!----- Main Section ----->
+    <!----- About Main Section ----->
     <!----------------------------------------->
-    <main class="Main bg-main-bg bg-cover bg-no-repeat bg-center">
-      <div class="bg-color w-full bg-cyan-400/80 relative">
-        <div class="absolute w-full">
-          <img class="" src="./images/main/shape-1.png" alt="" />
-        </div>
+    <main
+      class="Main bg-main-bg bg-cover bg-no-repeat bg-center w-full relative"
+    >
+      <div class="bg-color w-full bg-cyan-400/80">
+        <div class="absolute bg-about-top-curve about_top_bg"></div>
         <div class="container h-[80vh]">
           <div
             class="content text-6xl md:text-7xl flex justify-center items-center h-full"
@@ -424,9 +1028,7 @@
             <h1 class="capitalize font-bold text-white">About Us</h1>
           </div>
         </div>
-        <div class="absolute bottom-0 w-full">
-          <img class="" src="./images/main/banner-shap.png" alt="" />
-        </div>
+        <div class="about_bottom_bg"></div>
       </div>
     </main>
 
@@ -448,7 +1050,7 @@
           <div
             class="text flex flex-col justify-center items-center gap-6 text-center py-10 wow fadeInRight animated"
           >
-            <h2 class="text-4xl font-bold text-default-text-col">
+            <h2 class="font-bold text-default-text-col">
               We Always Want Safe and Healthy Water for Healthy Life.
             </h2>
             <div class="pera grid gap-6 md:gap-8 text-stone-500">
@@ -497,7 +1099,7 @@
           <div class="text grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="item_1 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl capitalize font-spartan"
               >
                 Maxium Purity
               </h4>
@@ -507,7 +1109,7 @@
             </div>
             <div class="item_2 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl capitalize font-spartan"
               >
                 Cholorine Free
               </h4>
@@ -517,7 +1119,7 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl capitalize font-spartan"
               >
                 5 Steps Filtration
               </h4>
@@ -527,7 +1129,7 @@
             </div>
             <div class="item_3 grid gap-4">
               <h4
-                class="text-default-text-col text-3xl font-normal capitalize font-spartan"
+                class="text-default-text-col text-2xl capitalize font-spartan"
               >
                 healthy water
               </h4>
@@ -561,37 +1163,37 @@
       <div
         class="main_background bg-protect-bg bg-center bg-cover bg-no-repeat"
       >
-        <div class="bg container pb-20 grid lg:grid-cols-7 pt-32">
-          <div
-            class="col-span-3 px-10 lg:px-0 justify-self-end lg:translate-x-20"
-          >
+        <div
+          class="bg container pb-20 md:grid lg:grid-cols-7 justify-center items-center pt-32"
+        >
+          <div class="lg:col-span-3 sm:px-10 lg:px-0 lg:translate-x-20">
             <div
-              class="content flex flex-col gap-10 justify-center items-center lg:pb-20"
+              class="content flex flex-col gap-10 justify-center items-center"
             >
               <div class="header">
-                <h3 class="text-4xl font-bold">
+                <h2 class="font-bold">
                   Protect Your Family with One of The Best Water Filtering
                   System.
-                </h3>
+                </h2>
               </div>
               <!-- Residential -->
               <div
-                class="residential max-w-[30rem] md:max-w-[40.5rem] grid gap-4 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-7 md:before:-left-10 before:top-1/2 before:transform before:-translate-y-1/2"
+                class="residential ml-10 max-w-[26rem] md:max-w-[40.5rem] grid gap-4 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-14 before:top-1/2 before:transform before:-translate-y-1/2"
               >
                 <h4 class="capitalize text-2xl font-bold">
                   Residential Waters
                 </h4>
-                <p class="text-lg px-10">
+                <p class="text-lg sm:px-10">
                   We deliver water for residential users on several cost saving
                   plans like Monthly, yearly plans.
                 </p>
               </div>
               <!-- Commercial -->
               <div
-                class="commercial max-w-[30rem] md:max-w-[40.5rem] grid gap-4 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-7 md:before:-left-10 before:top-1/2 before:transform before:-translate-y-1/2"
+                class="commercial ml-10 max-w-[26rem] md:max-w-[40.5rem] grid gap-4 relative before:absolute before:h-10 before:w-10 md:before:h-14 md:before:w-14 before:rounded-full before:bg-default-blue before:-left-14 before:top-1/2 before:transform before:-translate-y-1/2"
               >
                 <h4 class="capitalize text-2xl font-bold">Commercial Waters</h4>
-                <p class="text-lg px-10">
+                <p class="text-lg sm:px-10">
                   Specialities of our Commercial water is our plants are ready
                   for commercial level water deliveries.
                 </p>
@@ -600,7 +1202,7 @@
           </div>
           <!-- Water Bottle img -->
           <div
-            class="bottle_img px-6 md:px-0 md:translate-x-36 translate-y-20 lg:translate-y-44 col-span-4 w-full"
+            class="bottle_img sm:px-6 md:px-0 md:translate-x-36 translate-y-20 lg:translate-y-44 col-span-4 w-full"
           >
             <img
               class="border-[1rem] border-slate-50 w-full drop-shadow-xl wow fadeInRight animated"
@@ -868,9 +1470,9 @@
     <!----------------------------------------->
     <!----- Pricing Section ----->
     <!----------------------------------------->
-    <section x-data="{ swapToggle: 'yearly' }" class="overflow-hidden py-16">
+    <section x-data="{ swapToggle: 'yearly' }" class="overflow-hidden pt-16">
       <div class="container">
-        <div class="cotent lg:grid lg:grid-cols-2 gap-20">
+        <div class="cotent lg:grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div class="left flex flex-col gap-6 items-center">
             <div class="header capitalize">
               <h2 class="text-default-text-col">
@@ -906,15 +1508,16 @@
           </div>
 
           <!-- Pricing Carts -->
-          <div class="carts flex justify-center relative mt-24 lg:mt-0">
+          <div class="carts flex justify-center relative mt-24 lg:mt-0 mb-20">
             <!-- cart bg -->
             <div class="absolute cart_bg"></div>
             <!-- cart -->
             <div
-              x-bind:class="swapToggle === 'yearly' ? 'translate-x-0 scale-100 z-20': 'absolute translate-x-52  scale-[.8]' "
-              class="cart bg-white transform duration-1000"
+              x-on:click="swapToggle = 'yearly'"
+              x-bind:class="swapToggle === 'yearly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] -z-10 absolute' "
+              class="yearly transition-all duration-500 cart_all bg-white"
             >
-              <div class="relative border-slate-500 shadow-xl">
+              <div class="relative border-slate-500 shadow-xl bg-white">
                 <!-- Price -->
                 <div class="price">
                   <!-- Price bg -->
@@ -1005,10 +1608,11 @@
             <!-- cart -->
             <!-- monthly -->
             <div
-              x-bind:class="swapToggle === 'monthly' ? 'translate-x-0 scale-100 z-20': 'absolute translate-x-52 scale-[.8]' "
-              class="cart bg-white transform duration-1000"
+              x-on:click="swapToggle = 'monthly'"
+              x-bind:class="swapToggle === 'monthly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] -z-10 absolute' "
+              class="monthly transition-all duration-500 cart_all"
             >
-              <div class="relative border-slate-500 shadow-xl">
+              <div class="relative border-slate-500 shadow-xl bg-white">
                 <!-- Price -->
                 <div class="price">
                   <!-- Price bg -->
@@ -1371,7 +1975,7 @@
             <!-- Links list -->
             <ul class="links-list grid gap-4">
               <li>
-                <a href="#">About Us</a>
+                <a href="./about.html">About Us</a>
               </li>
               <li>
                 <a href="#">Services</a>
