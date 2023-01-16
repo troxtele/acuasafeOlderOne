@@ -40,7 +40,6 @@ $(document).ready(function () {
       items: 1,
       animateOut: "fadeOut",
       animateIn: "fadeIn",
-      active: true,
       smartSpeed: 1000,
       autoplay: 6000,
     });

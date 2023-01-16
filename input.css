@@ -40,18 +40,14 @@ p {
 
 /*=========== Nav Bar ==========*/
 [x-cloak] {
-  display: none !important;
+  @apply hidden !important;
 }
 .sub_menu {
-  opacity: 0;
-  visibility: hidden;
-  top: 110%;
+  @apply opacity-0 invisible top-[110%];
 }
 
 .nav_large ul .parent_li:hover > .sub_menu {
-  opacity: 1;
-  visibility: visible;
-  top: 100%;
+  @apply opacity-100 visible top-full;
 }
 
 .owl-stage-outer,
@@ -118,7 +114,7 @@ p {
 
 /*=========== bottle price Section ==========*/
 .bottle_price .items .item:hover img {
-  transform: scale(1);
+  @apply scale-100;
 }
 /*=========== News Section ==========*/
 .news .items .news_item:hover .hover_img {
@@ -128,40 +124,6 @@ p {
   @apply scale-105;
 }
 
-.about_top_bg {
-  position: absolute;
-  background-image: url("../images/main/shape-1.png");
-  left: 0px;
-  top: 0;
-  width: 100%;
-  height: 143px;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-}
-.about_bottom_bg {
-  position: absolute;
-  background-image: url("../images/main/banner-shap.png");
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 68px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-/* cart */
-.cart_bg {
-  position: absolute;
-  top: 5rem;
-  left: -1rem;
-  width: 30rem;
-  height: 30rem;
-  background-image: url("../images/pricing/pricing-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /*  Animations ***************************************************/
 
 /* Hero Slider Animation */
