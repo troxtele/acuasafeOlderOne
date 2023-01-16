@@ -14,7 +14,7 @@
     />
 
     <!-- Spartran -->
-    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="./fonts/font.css" />
     <!-- Font awesome -->
     <link
       rel="stylesheet"
@@ -28,8 +28,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
+    <!-- Animate CSS -->
     <link rel="stylesheet" href="./css/animate.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./css/owl.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./dist/output.css" />
     <!-- Alpine JS -->
@@ -37,11 +39,15 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <title>Document</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Acuasafe</title>
   </head>
 
   <body
-    x-data="{nav: false}"
+    x-data="{nav: false,
+    searchToggle : false,
+    }"
     :class="nav ? 'overflow-hidden' : 'overflow-visible'"
     class="text-md text-center text-default-text-col w-full h-full relative"
   >
@@ -421,16 +427,15 @@
           </div>
           <!-- Icons -->
           <div
-            x-data="{open : false}"
             class="hidden lg:flex icons gap-10 text-xl relative"
           >
             <i
-              @click="open = !open"
+              @click="searchToggle = !searchToggle"
               class="cursor-pointer fa-solid fa-magnifying-glass"
             ></i>
             <div
-            x-cloak
-              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
+              x-cloak
+              :class="searchToggle ? 'opacity-100 visible':'opacity-0 invisible' "
               class="search_input absolute flex justify-center items-center px-4 bg-slate-50 backdrop-blur-2xl top-12 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
             >
               <input
@@ -1014,96 +1019,251 @@
     <!----- Main Section ----->
     <!----------------------------------------->
     <main
-      class="hero bg-default-dark-blue h-[640px] sm:h-[700px] md:h-[880px] overflow-hidden relative"
+      class="hero bg-default-dark-blue h-[660px] sm:h-[700px] md:h-[880px] relative"
     >
-      <div class="wrapper w-full h-full max-w-[85rem] m-auto">
+      <!-- Background Images -->
+      <div class="bg_img">
         <!-- Top bg -->
         <div
-          class="top_bg absolute left-0 top-0 w-full h-[160px] bg-no-repeat bg-center"
+          class="top_bg absolute left-0 top-0 w-full h-[160px] bg-no-repeat bg-center z-20"
         ></div>
         <!-- Bottom bg -->
         <div
           class="bottom_bg w-full absolute left-0 bottom-0 h-[160px] bg-no-repeat bg-center"
         ></div>
-        <!-- Slider -->
-        <div class="hero_slider swiper relative h-full w-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide overflow-hidden flex items-center">
-              <!-- ****** Background Part ****** -->
-              <div class="bg_part">
-                <!-- Shadow bg -->
-                <div class="shadow_bg"></div>
-                <!--  BLOBS  -->
-                <div
-                  class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
-                ></div>
-                <!-- Large Blob -->
-                <div
-                  class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
-                ></div>
-              </div>
+      </div>
 
-              <!-- ****** Main content ****** -->
-              <div
-                class="container hero_content_down_animation z-20 text-white text-start lg:grid lg:grid-cols-2 gap-6"
-              >
-                <!-- Container bottle -->
-                <div
-                  class="large_bottle bottle_animation opacity-0 absolute h-[446px] w-[987px] right-0 bottom-[174px] hidden lg:flex"
+      <!-- *** Main Content *** -->
+      <div
+        class="hero_slider owl-theme owl-carousel owl-nav-none owl-dots-none h-full w-full overflow-hidden relative"
+      >
+        <!-- Slide 1 -->
+        <div
+          class="item h-full w-full relative grid justify-center items-center"
+        >
+          <div class="inner_bg">
+            <!-- Shadow bg -->
+            <div class="shadow_bg"></div>
+            <!--  BLOBS  -->
+            <div
+              class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
+            ></div>
+            <!-- Large Blob -->
+            <div
+              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+            ></div>
+          </div>
+
+          <div
+            class="container text-white text-start lg:grid lg:grid-cols-2 gap-6 relative"
+          >
+            <!-- Container bottle -->
+            <div
+              class="large_bottle absolute h-[446px] w-[987px] right-0 bottom-[63px] hidden lg:flex"
+            >
+              <!-- water drop -->
+              <div class="water_drop">
+                <img
+                  class="absolute h-full w-full"
+                  src="./images/main/vector-2.png"
+                  alt="water-drop"
+                />
+              </div>
+              <div class="bottle_img flex justify-center">
+                <img
+                  class="w-[280px] h-[528px] absolute"
+                  src="./images/main/vector-1.png"
+                  alt="bottle"
+                />
+              </div>
+            </div>
+            <!-- Contents -->
+            <div
+              class="left_content xs:-translate-y-16 -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+            >
+              <div class="header flex justify-center">
+                <h1
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
                 >
-                  <!-- water drop -->
-                  <div class="water_drop">
-                    <img
-                      class="absolute h-full w-full"
-                      src="./images/main/vector-2.png"
-                      alt="water-drop"
-                    />
-                  </div>
-                  <div class="bottle_img flex justify-center">
-                    <img
-                      class="w-[280px] h-[528px] absolute"
-                      src="./images/main/vector-1.png"
-                      alt="bottle"
-                    />
-                  </div>
-                </div>
-                <!-- Contents -->
-                <div
-                  class="content content_down_animation flex flex-col justify-center gap-5 md:gap-10"
+                  Always Want Safe and Good Water for Healthy Life
+                </h1>
+              </div>
+              <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
+                <p>
+                  Water is the most valuable source for living species that is
+                  the most hardest thing to find.
+                </p>
+              </div>
+              <!-- Buttons -->
+              <div class="buttons flex flex-wrap gap-6">
+                <!-- blue button -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
+                  href="#"
                 >
-                  <div class="header flex justify-center">
-                    <h1
-                      class="heading_animation animated opacity-0 text-3xl xs:text-4xl md:text-5xl lg:text-7xl"
-                    >
-                      Water Solutions with Highest Purity ensured
-                    </h1>
-                  </div>
-                  <div class="text text_up_animation animated opacity-0">
-                    <p>
-                      We have the facility to ensure the highest purity as we
-                      use the Top class equipments.
-                    </p>
-                  </div>
-                  <!-- Buttons -->
-                  <div
-                    class="buttons button_up_animation animated opacity-0 flex flex-wrap gap-6"
-                  >
-                    <!-- blue button -->
-                    <a
-                      class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
-                      href="#"
-                    >
-                      <span class="relative z-50">our services</span>
-                    </a>
-                    <!-- White btn -->
-                    <a
-                      class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-4 px-8 font-bold capitalize border border-stone-200 transition-all duration-500 before:overflow-hidden"
-                      href="#"
-                    >
-                      <span class="relative z-50">our services</span>
-                    </a>
-                  </div>
-                </div>
+                  <span class="relative z-20">our services</span>
+                </a>
+                <!-- White btn -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize border border-stone-200 transition-all duration-500 before:overflow-hidden"
+                  href="#"
+                >
+                  <span class="relative z-20">our services</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div
+          class="item h-full w-full relative grid justify-center items-center"
+        >
+          <div class="inner_bg">
+            <!-- Shadow bg -->
+            <div class="shadow_bg"></div>
+            <!--  BLOBS  -->
+            <div
+              class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
+            ></div>
+            <!-- Large Blob -->
+            <div
+              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+            ></div>
+          </div>
+
+          <div
+            class="container text-white text-start lg:grid lg:grid-cols-2 gap-6 relative"
+          >
+            <!-- Container bottle -->
+            <div
+              class="large_bottle absolute h-[446px] w-[987px] right-0 bottom-[63px] hidden lg:flex"
+            >
+              <!-- water drop -->
+              <div class="water_drop">
+                <img
+                  class="absolute h-full w-full"
+                  src="./images/main/vector-2.png"
+                  alt="water-drop"
+                />
+              </div>
+              <div class="bottle_img flex justify-center">
+                <img
+                  class="w-[280px] h-[528px] absolute"
+                  src="./images/main/vector-1.png"
+                  alt="bottle"
+                />
+              </div>
+            </div>
+            <!-- Contents -->
+            <div
+              class="left_content -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+            >
+              <div class="header flex justify-center">
+                <h1
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
+                >
+                  Pure Drinking water for healthy life ensured
+                </h1>
+              </div>
+              <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
+                <p>
+                  We know you are searching for the purest and healthiest source
+                  for your daily water needs.
+                </p>
+              </div>
+              <!-- Buttons -->
+              <div class="buttons flex flex-wrap gap-6">
+                <!-- blue button -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
+                  href="#"
+                >
+                  <span class="relative z-20">our services</span>
+                </a>
+                <!-- White btn -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize border border-stone-200 transition-all duration-500 before:overflow-hidden"
+                  href="#"
+                >
+                  <span class="relative z-20">our services</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div
+          class="item h-full w-full relative grid justify-center items-center"
+        >
+          <div class="inner_bg">
+            <!-- Shadow bg -->
+            <div class="shadow_bg"></div>
+            <!--  BLOBS  -->
+            <div
+              class="animated_blob absolute right-80 top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
+            ></div>
+            <!-- Large Blob -->
+            <div
+              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+            ></div>
+          </div>
+
+          <div
+            class="container text-white text-start lg:grid lg:grid-cols-2 gap-6 relative"
+          >
+            <!-- Container bottle -->
+            <div
+              class="large_bottle absolute h-[446px] w-[987px] right-0 bottom-[63px] hidden lg:flex"
+            >
+              <!-- water drop -->
+              <div class="water_drop">
+                <img
+                  class="absolute h-full w-full"
+                  src="./images/main/vector-2.png"
+                  alt="water-drop"
+                />
+              </div>
+              <div class="bottle_img flex justify-center">
+                <img
+                  class="w-[280px] h-[528px] absolute"
+                  src="./images/main/vector-1.png"
+                  alt="bottle"
+                />
+              </div>
+            </div>
+            <!-- Contents -->
+            <div
+              class="left_content xs:-translate-y-16 -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+            >
+              <div class="header flex justify-center">
+                <h1
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
+                >
+                  Always Want Safe and Good Water for Healthy Life
+                </h1>
+              </div>
+              <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
+                <p>
+                  Water is the most valuable source for living species that is
+                  the most hardest thing to find.
+                </p>
+              </div>
+              <!-- Buttons -->
+              <div class="buttons flex flex-wrap gap-6">
+                <!-- blue button -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize bg-default-blue transition-all duration-500 before:overflow-hidden"
+                  href="#"
+                >
+                  <span class="relative z-20">our services</span>
+                </a>
+                <!-- White btn -->
+                <a
+                  class="btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-10 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-2 md:py-4 px-5 md:px-8 font-bold capitalize border border-stone-200 transition-all duration-500 before:overflow-hidden"
+                  href="#"
+                >
+                  <span class="relative z-20">our services</span>
+                </a>
               </div>
             </div>
           </div>
@@ -1113,10 +1273,12 @@
     <!----------------------------------------->
     <!----- Overflow Section ----->
     <!----------------------------------------->
-    <section class="overflow_section container">
-      <div class="relative py-20 bg-white -translate-y-24 z-30">
+    <section class="overflow_section container -translate-y-16 md:-translate-y-24 overflow-hidden relative z-30">
+      <div
+        class="relative py-20 bg-white wow animated fadeInLeft"
+      >
         <div
-          class="content wow animated fadeInLeft grid justify-center items-center gap-14 text-default-text-col"
+          class="content grid justify-center items-center gap-14 text-default-text-col bg-white"
         >
           <div class="header flex justify-center">
             <h2 class="max-w-[30rem]">
@@ -1207,7 +1369,7 @@
             </div>
             <!-- Btn -->
             <button
-              class="max-w-[12rem] mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-dark-blue my-8 bg-cyan-400 rounded-full py-2 px-8 sm:py-3 sm:px-10 before:transform-all before:duration-700 text-xl overflow-hidden"
+              class="max-w-[12rem] mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-default-dark-blue my-8 bg-cyan-400 rounded-full py-2 p text-lg sm:py-3 sm:px-10 before:transform-all before:duration-700 te py-2x md:text-xl px-5 md:overflow-hidden"
             >
               <a
                 href="#"
@@ -1423,7 +1585,7 @@
           </div>
           <!-- Water Bottle img -->
           <div
-            class="bottle_img md:translate-x-36 translate-y-20 lg:translate-y-64 col-span-4 w-full"
+            class="bottle_img md:translate-x-36 translate-y-20 lg:translate-y-64 col-span-4 w-full z-0"
           >
             <img
               class="wow fadeInRight animated border-[1rem] border-slate-50 w-full drop-shadow-xl"
@@ -1441,10 +1603,10 @@
       <div class="container">
         <!-- Items -->
         <div
-          class="items wow fadeInUp animated grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="items grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <!-- item 1 -->
-          <div class="item grid justify-center">
+          <div class="item wow fadeInUp animated grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
                 class="transform scale-95 transition-all duration-500"
@@ -1484,7 +1646,7 @@
             </div>
           </div>
           <!-- item 2 -->
-          <div class="item grid justify-center">
+          <div class="item wow fadeInUp animated grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
                 class="transform scale-95 transition-all duration-500"
@@ -1524,7 +1686,7 @@
             </div>
           </div>
           <!-- item 3 -->
-          <div class="item grid justify-center">
+          <div class="item wow fadeInUp animated grid justify-center">
             <div class="bottle_img flex justify-center">
               <img
                 class="transform scale-95 transition-all duration-500"
@@ -1836,7 +1998,7 @@
             class="members wow fadeInUp animated w-full grid sm:grid-cols-2 lg:grid-cols-3 justify-center gap-4 items-center px-6 sm:px-10"
           >
             <!-- Member 1 -->
-            <div class="member grid gap-6 justify-center">
+            <div class="member wow animated fadeInUp grid gap-6 justify-center">
               <div class="img_wrapper relative">
                 <!-- hover img bg -->
                 <div
@@ -1891,7 +2053,7 @@
               </div>
             </div>
             <!-- Member 2 -->
-            <div class="member grid gap-6 justify-center">
+            <div class="member wow animated fadeInUp grid gap-6 justify-center">
               <div class="img_wrapper relative">
                 <!-- hover img bg -->
                 <div
@@ -1946,7 +2108,7 @@
               </div>
             </div>
             <!-- Member 3 -->
-            <div class="member grid gap-6 justify-center">
+            <div class="member wow animated fadeInUp grid gap-6 justify-center">
               <div class="img_wrapper relative">
                 <!-- hover img bg -->
                 <div
@@ -2050,7 +2212,7 @@
             </ul>
 
             <a
-              class="mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-7 before:transform-all before:duration-700 text-xl overflow-hidden text-white hover:text-default-blue rounded-full md:py-4 px-8 font-bold capitalize bg-default-blue transition-all duration-500 z-10"
+              class="mt-6 btn relative before:absolute before:w-[200%] before:h-[200%] before:top-[110%] before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:bg-white sm:py-3 sm:px-7 before:transform-all before:duration-700 text-lg sm:text-xl overflow-hidden text-white hover:text-default-blue rounded-full py-3 px-5 md:py-4 md:px-8 font-bold capitalize bg-default-blue transition-all duration-500 z-10"
               href="#"
             >
               <button class="relative z-20">our services</button>
@@ -2078,10 +2240,10 @@
             <h2>Stay Update with Acuasafe</h2>
           </div>
           <div
-            class="items wow fadeInUp animated grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0"
+            class="items grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0"
           >
             <!-- item 1 -->
-            <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
+            <div class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20">
               <div class="img relative overflow-hidden">
                 <!-- hover img bg -->
                 <div
@@ -2139,7 +2301,7 @@
               </div>
             </div>
             <!-- item 2 -->
-            <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
+            <div class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20">
               <div class="img relative overflow-hidden">
                 <!-- hover img bg -->
                 <div
@@ -2196,7 +2358,7 @@
               </div>
             </div>
             <!-- item 3 -->
-            <div class="news_item lg:w-[33.3333%] md:w-[50%] md:px-2 md:mt-20">
+            <div class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20">
               <div class="img relative overflow-hidden">
                 <!-- hover img bg -->
                 <div
@@ -2302,7 +2464,7 @@
               />
             </a>
             <!-- text container -->
-            <div class="text">
+            <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
               <span class="text-lg"
                 >Delivering the Purest Water for a Healthy life</span
               >
@@ -2485,6 +2647,14 @@
     <script>
       new WOW().init();
     </script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Owl carousel -->
+    <script src="./js/owl.js"></script>
     <!-- main js -->
     <script src="./js/script.js"></script>
   </body>
