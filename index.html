@@ -41,13 +41,12 @@
     ></script>
     <!-- Fav Icon -->
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- Title -->
     <title>Acuasafe</title>
   </head>
 
   <body
-    x-data="{nav: false,
-    searchToggle : false,
-    }"
+    x-data="{nav: false}"
     :class="nav ? 'overflow-hidden' : 'overflow-visible'"
     class="text-md text-center text-default-text-col w-full h-full relative"
   >
@@ -55,7 +54,7 @@
     <!----- Header Section ----->
     <!----------------------------------------->
     <header
-      class="bg-white sticky left-0 right-0 top-0 z-40 transition-all duration-700"
+      class="bg-white/80 backdrop-blur-3xl sticky left-0 right-0 top-0 z-40 transition-all duration-700"
     >
       <div class="container">
         <div
@@ -63,17 +62,21 @@
         >
           <a href="index.html" class="logo">
             <figure>
-              <img class="w-[13rem]" src="./images/nav/logo.png" alt="logo" />
+              <img
+                class="w-[11rem] md:w-[13rem]"
+                src="./images/nav/logo.png"
+                alt="logo"
+              />
             </figure>
           </a>
           <nav class="nav_large hidden lg:block h-full">
             <!-- Nav Large -->
-            <ul class="lg:flex gap-12 font-bold capitalize h-full py-5">
+            <ul class="lg:flex gap-12 font-bold capitalize h-full py-4 md:py-7">
               <!-- Home -->
               <li class="h-full parent_li">
                 <a
                   href="./index.html"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >home</a
                 >
                 <!-- Sub menu -->
@@ -121,7 +124,7 @@
               <li class="h-full parent_li">
                 <a
                   href="./about.html"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >pages</a
                 >
                 <!-- Sub menu -->
@@ -183,7 +186,7 @@
               <li class="h-full parent_li">
                 <a
                   href="#"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >Services</a
                 >
                 <!-- Sub menu -->
@@ -245,7 +248,7 @@
               <li class="h-full parent_li">
                 <a
                   href="#"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >elements</a
                 >
                 <!-- Sub menu -->
@@ -298,7 +301,7 @@
                     <a
                       href="#"
                       class="w-full flex hover:text-cyan-400 transition-all duration-300 py-3 px-4 border-b border-slate-600/40"
-                      >news block 01</a
+                      >Tblock 01</a
                     >
                   </li>
                   <li class="w-72 flex justify-start">
@@ -342,7 +345,7 @@
               <li class="h-full parent_li">
                 <a
                   href="#"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >Shop</a
                 >
                 <!-- Sub menu -->
@@ -383,7 +386,7 @@
               <li class="h-full parent_li">
                 <a
                   href="#"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >blog</a
                 >
                 <!-- Sub menu -->
@@ -410,7 +413,7 @@
               <li class="h-full parent_li">
                 <a
                   href="#"
-                  class="hover:text-cyan-400 transition-all duration-300 py-5"
+                  class="hover:text-cyan-400 transition-all duration-300 py-7"
                   >contact</a
                 >
               </li>
@@ -426,19 +429,22 @@
             <div class="w-8 h-[2px] bg-slate-900"></div>
           </div>
           <!-- Icons -->
-          <div class="hidden lg:flex icons gap-10 text-xl relative">
+          <div
+            x-data="{open : false}"
+            class="hidden lg:flex icons gap-10 text-xl relative"
+          >
             <i
-              @click="searchToggle = !searchToggle"
+              @click="open = !open"
               class="cursor-pointer fa-solid fa-magnifying-glass"
             ></i>
             <div
               x-cloak
-              :class="searchToggle ? 'opacity-100 visible':'opacity-0 invisible' "
-              class="search_input absolute flex justify-center items-center px-4 bg-slate-50 backdrop-blur-2xl top-12 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
+              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
+              class="search_input absolute flex justify-center items-center px-4 bg-white/90 backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
             >
               <input
                 type="text"
-                class="input w-full h-16 border-none focus:outline-none bg-transparent placeholder:text-sm placeholder:select-none placeholder:text-slate-500"
+                class="input w-full h-16 border-none focus:outline-none bg-transparent placeholder:text-sm placeholder:select-none placeholder:text-slate-500 text-sm"
                 placeholder="Search..."
               />
               <i
@@ -476,7 +482,13 @@
         class="wrapper absolute top-0 right-0 bottom-0 transform transition-all duration-1000 bg-default-small-nav w-72"
       >
         <div class="logo py-10 px-6 flex justify-between items-center">
-          <img class="w-[10rem]" src="./images/footer/footer-logo.png" alt="" />
+          <a href="#">
+            <img
+              class="w-[10rem]"
+              src="./images/footer/footer-logo.png"
+              alt=""
+            />
+          </a>
           <div
             x-on:click="nav = ! nav"
             class="cross fixed right-4 font-bold text-white text-xl p-2 cursor-pointer transform hover:rotate-180 duration-1000"
@@ -1237,13 +1249,13 @@
                 <h1
                   class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
                 >
-                  Always Want Safe and Good Water for Healthy Life
+                  Water Solutions with Highest Purity ensured
                 </h1>
               </div>
               <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
                 <p>
-                  Water is the most valuable source for living species that is
-                  the most hardest thing to find.
+                  We have the facility to ensure the highest purity as we use
+                  the Top class equipments.
                 </p>
               </div>
               <!-- Buttons -->
@@ -1737,8 +1749,10 @@
               What Our Client are Saying About Acuasafe
             </h2>
           </div>
-          <div class="swiper client_slider py-20">
-            <div class="swiper-wrapper pt-10 pb-20">
+          <!-- Swiper pagination -->
+          <div class="flex justify-end home_pagination mt-10"></div>
+          <div class="swiper home_client_slider py-10">
+            <div class="swiper-wrapper">
               <!-- Client 1 -->
               <div class="swiper-slide">
                 <div class="team_1 flex gap-8 justify-center">
@@ -1975,7 +1989,6 @@
                 </div>
               </div>
             </div>
-            <div class="client_pagination"></div>
           </div>
         </div>
       </div>
@@ -1983,7 +1996,7 @@
     <!----------------------------------------->
     <!----- Team Section ----->
     <!----------------------------------------->
-    <section class=" py-8 md:py-16">
+    <section class="py-8 md:py-16">
       <div class="container text-start">
         <div class="content grid gap-12 items-center">
           <div class="header justify-self-center text-center">
@@ -2231,9 +2244,9 @@
     <!----------------------------------------->
     <!----- News Section ----->
     <!----------------------------------------->
-    <section class="news py-20">
+    <section class="news py-20 md:py-32">
       <div class="px-6 container">
-        <div class="content grid gap-10 md:-mx-10">
+        <div class="content grid md:-mx-10">
           <div class="header flex justify-center">
             <h2>Stay Update with Acuasafe</h2>
           </div>
@@ -2245,15 +2258,15 @@
               class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20"
             >
               <div class="img relative overflow-hidden">
+                <img
+                  class="w-full h-full p-0 m-0 relative transition-all duration-500"
+                  src="./images/news/news-1.jpg"
+                  alt="news-1"
+                />
                 <!-- hover img bg -->
                 <div
                   class="hover_img absolute -inset-0 transition-all duration-300"
                 ></div>
-                <img
-                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
-                  src="./images/news/news-1.jpg"
-                  alt="news-1"
-                />
               </div>
               <div
                 class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
@@ -2305,15 +2318,15 @@
               class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20"
             >
               <div class="img relative overflow-hidden">
+                <img
+                  class="w-full h-full relative transition-all duration-500"
+                  src="./images/news/news-2.jpg"
+                  alt="news-2"
+                />
                 <!-- hover img bg -->
                 <div
                   class="hover_img absolute -inset-0 transition-all duration-300"
                 ></div>
-                <img
-                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
-                  src="./images/news/news-2.jpg"
-                  alt="news-1"
-                />
               </div>
               <div
                 class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
@@ -2364,15 +2377,15 @@
               class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 md:mt-20"
             >
               <div class="img relative overflow-hidden">
+                <img
+                  class="w-full h-full relative transition-all duration-500"
+                  src="./images/news/news-3.jpg"
+                  alt="news-3"
+                />
                 <!-- hover img bg -->
                 <div
                   class="hover_img absolute -inset-0 transition-all duration-300"
                 ></div>
-                <img
-                  class="w-full relative after:w-10 after:h-10 after:bg-green-500 after:z-40 transition-all duration-500 after:absolute after:block"
-                  src="./images/news/news-3.jpg"
-                  alt="news-1"
-                />
               </div>
               <div
                 class="texts px-4 py-6 flex flex-col gap-4 justify-center items-center custom_shadow"
@@ -2537,14 +2550,14 @@
             </div>
             <!-- Email Input -->
             <div
-              class="flex bg-slate-100 text-slate-900 border rounded-full overflow-hidden max-w-[18rem]"
+              class="flex email_container border border-transparent bg-slate-100 text-slate-900 rounded-full overflow-hidden max-w-[18rem]"
             >
               <span
                 ><input
                   type="email"
                   value=""
                   size="40"
-                  class="input w-full h-full border-none focus: bg-transparent placeholder:select-none placeholder:text-slate-400 py-4 pl-5 focus:outline-none focus:border-4 focus:border-l-default-blue focus:border-y-default-blue focus:ring-1 focus:ring-sky-500 disabled:bg-white disabled:text-white0 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-bl-full rounded-tl-full"
+                  class="input w-full h-full border-none focus: bg-transparent placeholder:select-none placeholder:text-slate-400 py-4 pl-5 focus:outline-none focus:ring-8 focus:ring-sky-500 disabled:bg-white disabled:text-white0 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-bl-full rounded-tl-full email_input"
                   aria-required="true"
                   aria-invalid="false"
                   placeholder="Your Email"
@@ -2635,6 +2648,12 @@
         </div>
       </div>
     </footer>
+    <!-- Scroll Top Button -->
+    <div
+      class="scroll_top z-40 fixed transition-all duration-700 cursor-pointer right-10 bg-default-blue sm:py-3 sm:px-5 tex py-2 px-4 rounded-sm text-white text-lg sm:text-xl"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <!-- overlay -->
     <div
       @click="nav = false"

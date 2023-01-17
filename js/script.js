@@ -1,14 +1,54 @@
 const nav = document.querySelector("header");
+const scrollTopBtn = document.querySelector(".scroll_top");
+// Sticky nav
+const StickyHeader = document.querySelector(".sticky_header");
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 20) {
     nav.classList.add("drop-shadow-lg");
   } else {
     nav.classList.remove("drop-shadow-lg");
   }
+
+  // Scroll to top
+  if (window.scrollY > 100) {
+    scrollTopBtn.classList.add("bottom-14");
+    scrollTopBtn.classList.remove("-bottom-[100px]");
+  } else {
+    scrollTopBtn.classList.add("-bottom-[100px]");
+    scrollTopBtn.classList.remove("bottom-14");
+  }
+});
+// Scroll to Top
+scrollTopBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
 
 // ************************ Sliders
-var swiper = new Swiper(".client_slider", {
+
+// Home client Slider
+var homeSlider = new Swiper(".home_client_slider", {
+  slidesPerView: 0,
+  loop: true,
+  autoplay: true,
+  pagination: {
+    el: ".home_pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    760: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+  },
+});
+// About Client Slider
+let swiper = new Swiper(".client_slider", {
   slidesPerView: 0,
   loop: true,
   autoplay: true,
@@ -28,10 +68,7 @@ var swiper = new Swiper(".client_slider", {
   },
 });
 
-// owl carousel
-("use strict");
-
-// Owl-carousel
+// Home Carousel
 $(document).ready(function () {
   if ($(".hero_slider").length) {
     $(".hero_slider").owlCarousel({
