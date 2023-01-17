@@ -38,7 +38,7 @@ p {
   @apply -top-[10%] z-10;
 }
 
-/*=========== Nav Bar ==========*/
+/*=== Nav Bar ===*/
 [x-cloak] {
   @apply hidden !important;
 }
@@ -56,60 +56,21 @@ p {
   @apply h-full w-full overflow-hidden;
 }
 
-/*=========== Main page ==========*/
-/* main bg */
-.hero .top_bg {
-  background-image: url("../images/main/shape-1.png");
-  background-position: bottom center;
-  background-size: cover;
-}
-.hero .bottom_bg {
-  background-image: url("../images/main/banner-shap.png");
-  background-position: bottom center;
-  background-size: cover;
-}
+/*=== Main page ===*/
 
-/* bottom bg */
-.shadow_bg {
-  position: absolute;
-  background-image: url("../images/main/shape-2.png");
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 363px;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+/* Bottle man */
+.water .items .item {
+  transition: all 0.5s ease;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
 }
-
-.water_drop img {
-  bottom: -152px;
-  right: -177px;
-}
-.bottle_img img {
-  bottom: -72px;
-  right: 133px;
+.water .items .item:hover {
+  transform: translateY(-15px);
+  box-shadow: 10px 10px 40px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* box shadow */
 .custom_shadow {
-  box-shadow: 0px 10px 40px 0px rgba(0, 19, 83, 0.13);
-}
-
-.service-block-one .inner-box {
-  position: relative;
-  display: block;
-  background: #fff;
-  padding: 40px 40px 35px 40px;
-  box-shadow: 0px 10px 40px 0px rgb(0 0 0 / 8%);
-  margin-bottom: 70px;
-  z-index: 1;
-  transition: all 500ms ease;
-}
-
-.service-block-one .inner-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 40px 0px rgb(0 0 0 / 12%);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Swiper Slider */
@@ -120,7 +81,7 @@ p {
   @apply bg-default-blue;
 }
 
-/*=========== Team Section ==========*/
+/*=== Team Section ===*/
 .member:hover .hover_img {
   @apply bg-slate-900/50;
 }
@@ -128,11 +89,11 @@ p {
   @apply scale-100;
 }
 
-/*=========== bottle price Section ==========*/
+/*=== bottle price Section ===*/
 .bottle_price .items .item:hover img {
   @apply scale-100;
 }
-/*=========== News Section ==========*/
+/*=== News Section ===*/
 .news .items .news_item:hover .hover_img {
   @apply bg-slate-900/50;
 }
@@ -140,54 +101,11 @@ p {
   @apply scale-105;
 }
 
-/*=========== about Page footer Section ==========*/
+/*=== about Page footer Section ===*/
 .email_container:focus-within {
   @apply border-default-blue;
 }
 /*  Animations ***************************************************/
-/* Sticky Header */
-.sticky_header {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 0;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-}
-.fixed_header .sticky_header {
-  z-index: 40;
-  opacity: 1;
-  visibility: visible;
-  -ms-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -op-animation-name: fadeInDown;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -ms-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -op-animation-duration: 500ms;
-  -webkit-animation-duration: 500ms;
-  animation-duration: 500ms;
-  -ms-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -op-animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -ms-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  -op-animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
 /* Animated Blob */
 
 .animated_blob {

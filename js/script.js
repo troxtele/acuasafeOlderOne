@@ -1,15 +1,12 @@
 const nav = document.querySelector("header");
 const scrollTopBtn = document.querySelector(".scroll_top");
-// Sticky nav
-const StickyHeader = document.querySelector(".sticky_header");
-
 window.addEventListener("scroll", () => {
+  // header Drop down
   if (window.scrollY > 20) {
     nav.classList.add("drop-shadow-lg");
   } else {
     nav.classList.remove("drop-shadow-lg");
   }
-
   // Scroll to top
   if (window.scrollY > 100) {
     scrollTopBtn.classList.add("bottom-14");
@@ -19,7 +16,8 @@ window.addEventListener("scroll", () => {
     scrollTopBtn.classList.remove("bottom-14");
   }
 });
-// Scroll to Top
+
+// Scroll to Top Click
 scrollTopBtn.addEventListener("click", () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

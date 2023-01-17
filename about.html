@@ -1971,7 +1971,7 @@
         </div>
       </div>
       <!-- Footer Main -->
-      <div class="footer_main relative">
+      <div class="footer_main relative pb-10">
         <div
           class="content container grid sm:grid-cols-2 lg:grid-cols-4 gap-8 z-20 relative"
         >
@@ -2154,15 +2154,16 @@
     </footer>
     <!-- Scroll Top Button -->
     <div
-      class="scroll_top z-40 fixed transition-all duration-700 cursor-pointer right-10 bg-default-blue sm:py-3 sm:px-5 tex py-2 px-4 rounded-sm text-white text-lg sm:text-xl"
+      class="scroll_top z-40 fixed transition-all duration-700 cursor-pointer right-5 sm:right-10 bg-default-blue sm:py-3 sm:px-5 tex py-2 px-4 rounded-sm text-white text-lg sm:text-xl"
     >
       <i class="fa-solid fa-arrow-up"></i>
     </div>
     <!-- overlay -->
     <div
       @click="nav = false"
-      x-bind:class="nav ? 'bg-black/70 z-[30]' : '-z-10'"
-      class="overlay absolute inset-0 transition-all duration-800"
+      x-cloak
+      x-bind:class="nav ? 'visible' : 'invisible'"
+      class="overlay absolute bg-slate-900/70 z-40 inset-0 transition-all duration-500"
     ></div>
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
