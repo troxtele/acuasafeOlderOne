@@ -466,8 +466,8 @@
             ></i>
             <div
               x-cloak
-              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
-              class="search_input absolute flex justify-center items-center px-4 bg-white/90 backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
+              :class="open ? 'opacity-100 visible scale-100':'opacity-0 invisible scale-75' "
+              class="search_input absolute flex justify-center items-center px-4 bg-white backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
             >
               <input
                 type="text"
@@ -492,7 +492,6 @@
     <!----------------------------------------->
     <nav
       x-data="{toggleSub: false}"
-      @click="nav: !nav"
       class="nav_small fixed top-0 right-0 bottom-0 w-72 z-50 transition-all duration-500"
       x-bind:class="nav ? 'visible ' : 'invisible' "
       x-cloak
@@ -1117,13 +1116,9 @@
       <div class="container">
         <div class="content grid md:grid-cols-2 justify-between gap-16">
           <div
-            class="image -ml-20 flex items-center justify-center wow fadeInLeft animated"
+            class="image -ml-10 sm:-ml-20 flex items-center justify-center wow fadeInLeft animated"
           >
-            <img
-              class="w-full"
-              src="./images/about/about-1.png"
-              alt=""
-            />
+            <img class="w-full" src="./images/about/about-1.png" alt="" />
           </div>
           <div
             class="text flex flex-col justify-center items-center gap-6 text-center wow fadeInRight animated"
@@ -1164,7 +1159,7 @@
     <!----------------------------------------->
     <!----- Service Section ----->
     <!----------------------------------------->
-    <section class="py-16 xs:pb-32">
+    <section class="feature_section py-16 xs:pb-32">
       <div class="container">
         <div
           class="content animated wow fadeInLeft grid items-center gap-14 bg-white"
@@ -1297,7 +1292,7 @@
         ></div>
         <!-- Large Blob -->
         <div
-          class="blob_large absolute -right-16 -top-20 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+          class="hidden sm:block blob_large absolute -right-16 -top-20 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
         ></div>
       </div>
       <div class="bg-center bg-cover bg-no-repeat py-20 bg-protect-bg">
@@ -1378,7 +1373,7 @@
     <!----- Client Section ----->
     <!----------------------------------------->
     <section class="py-16 bg-[#f2f9ff] relative">
-      <!-- Background Images -->
+     <!-- Background Images -->
       <div class="bg_img">
         <div
           class="hidden md:block bg_top bg-shape-8 absolute left-0 top-0 w-full h-[80px] bg-[length:100%_100%] bg-no-repeat bg-center"
@@ -1395,15 +1390,13 @@
               What Our Client are Saying About Acuasafe
             </h2>
           </div>
-          <!-- Swiper pagination -->
-          <div class="flex justify-end home_pagination my-8 sm:my-10"></div>
-          <div class="swiper about_client_slider text-start ">
-            <div class="swiper-wrapper ">
+          <div class="swiper mt-10 about_client_slider text-start">
+            <div class="swiper-wrapper">
               <!-- Client 1 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_1 flex flex-col md:flex-row gap-8">
+                <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-1.jpg"
@@ -1442,9 +1435,9 @@
               </div>
               <!-- Client 2 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_2 flex flex-col md:flex-row gap-8">
+                <div class="client_2 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-2.jpg"
@@ -1483,9 +1476,9 @@
               </div>
               <!-- Client 3 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_1 flex flex-col md:flex-row gap-8">
+                <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-3.jpg"
@@ -1524,9 +1517,9 @@
               </div>
               <!-- Client 4 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_1 flex flex-col md:flex-row gap-8">
+                <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-4.jpg"
@@ -1565,9 +1558,9 @@
               </div>
               <!-- Client 5 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_1 flex flex-col md:flex-row gap-8">
+                <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-5.jpg"
@@ -1606,9 +1599,9 @@
               </div>
               <!-- Client 6 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
-                <div class="client_1 flex flex-col md:flex-row gap-8">
+                <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
                     class="rounded-full max-w-[100px] max-h-[100px]"
                     src="./images/client/client-6.jpg"
@@ -1646,8 +1639,8 @@
                 </div>
               </div>
             </div>
-            <div class="client_pagination mt-14 text-center"></div>
           </div>
+          <div class="client_pagination mt-14 text-center"></div>
         </div>
       </div>
     </section>
@@ -1700,7 +1693,7 @@
             <!-- cart -->
             <div
               x-on:click="swapToggle = 'yearly'"
-              x-bind:class="swapToggle === 'yearly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] absolute' "
+              x-bind:class="swapToggle === 'yearly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] absolute z-10' "
               class="yearly transition-all duration-500 cart_all bg-white"
             >
               <div class="relative border-slate-500 shadow-xl bg-white">
@@ -1800,7 +1793,7 @@
             <!-- monthly -->
             <div
               x-on:click="swapToggle = 'monthly'"
-              x-bind:class="swapToggle === 'monthly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] absolute' "
+              x-bind:class="swapToggle === 'monthly' ? 'scale-100 z-20' : 'scale-90 translate-x-[300px] absolute z-10' "
               class="monthly transition-all duration-500 cart_all"
             >
               <div class="relative border-slate-500 shadow-xl bg-white">
@@ -2330,10 +2323,11 @@
       <i class="fa-solid fa-arrow-up"></i>
     </div>
     <!-- overlay -->
+    <!-- overlay -->
     <div
       @click="nav = false"
       x-cloak
-      x-bind:class="nav ? 'visible' : 'invisible'"
+      x-bind:class="nav ? 'visible opacity-100' : 'invisible opacity-0'"
       class="overlay absolute bg-slate-900/70 z-40 inset-0 transition-all duration-500"
     ></div>
     <!-- Swiper js -->

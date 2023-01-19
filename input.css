@@ -15,11 +15,11 @@ section {
 }
 
 /* Overflow section */
-.overflow_section {
+.feature_section {
   @apply overflow-visible;
 }
 
-.overflow_section .items .item:hover img {
+.feature_section .items .item:hover img {
   @apply scale-100
 }
 

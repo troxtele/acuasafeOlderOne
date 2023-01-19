@@ -468,7 +468,7 @@
             ></i>
             <div
               x-cloak
-              :class="open ? 'opacity-100 visible scale-100':'opacity-0 invisible scale-50' "
+              :class="open ? 'opacity-100 visible scale-100':'opacity-0 invisible scale-75' "
               class="search_input absolute flex justify-center items-center px-4 bg-white backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
             >
               <input
@@ -494,7 +494,6 @@
     <!----------------------------------------->
     <nav
       x-data="{toggleSub: false}"
-      @click="nav: !nav"
       class="nav_small fixed top-0 right-0 bottom-0 w-72 z-50 transition-all duration-500"
       x-bind:class="nav ? 'visible ' : 'invisible' "
       x-cloak
@@ -1125,7 +1124,7 @@
             ></div>
             <!-- Large Blob -->
             <div
-              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+              class="hidden sm:block blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
             ></div>
           </div>
 
@@ -1350,10 +1349,10 @@
       </div>
     </main>
     <!----------------------------------------->
-    <!----- Overflow Section ----->
+    <!----- Feature Section ----->
     <!----------------------------------------->
     <section
-      class="overflow_section -translate-y-16 sm:-translate-y-24 z-20 relative"
+      class="feature_section -translate-y-16 sm:-translate-y-24 z-20 relative"
     >
       <div class="container">
         <div
@@ -1478,7 +1477,7 @@
       <div class="container">
         <div class="content grid md:grid-cols-2 justify-between gap-16">
           <div
-            class="image -ml-20 flex items-center justify-center wow fadeInLeft animated"
+            class="image -ml-10 sm:-ml-20 flex items-center justify-center wow fadeInLeft animated"
           >
             <img
               class="max-w-[42rem] w-full"
@@ -1777,7 +1776,7 @@
     <!----------------------------------------->
     <!----- Shop Section ----->
     <!----------------------------------------->
-    <section class="shop py-16 md:py-24">
+    <section class="shop py-16 lg:py-24">
       <div class="container grid gap-16">
         <div class="header flex justify-center">
           <h2 class="text-default-text-col">
@@ -1962,7 +1961,7 @@
             <div class="swiper-wrapper">
               <!-- Client 1 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2003,7 +2002,7 @@
               </div>
               <!-- Client 2 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_2 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2044,7 +2043,7 @@
               </div>
               <!-- Client 3 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2085,7 +2084,7 @@
               </div>
               <!-- Client 4 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2126,7 +2125,7 @@
               </div>
               <!-- Client 5 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2167,7 +2166,7 @@
               </div>
               <!-- Client 6 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] drop-shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2500,7 +2499,7 @@
                 </a>
               </div>
               <div
-                class="texts px-4 py-12 flex flex-col gap-4 justify-center items-start custom_shadow"
+                class="texts px-4 pt-8 pb-12 flex flex-col gap-4 justify-center items-start custom_shadow"
               >
                 <a
                   href="#"
@@ -2567,7 +2566,7 @@
                 </a>
               </div>
               <div
-                class="texts px-4 py-12 flex flex-col gap-4 justify-center items-start custom_shadow"
+                class="texts px-4 pt-8 pb-12 flex flex-col gap-4 justify-center items-start custom_shadow"
               >
                 <a
                   href="#"
@@ -2633,7 +2632,7 @@
                 </a>
               </div>
               <div
-                class="texts px-4 py-12 flex flex-col gap-4 justify-center items-start custom_shadow"
+                class="texts px-4 pt-8 pb-12 flex flex-col gap-4 justify-center items-start custom_shadow"
               >
                 <a
                   href="#"

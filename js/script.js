@@ -23,14 +23,15 @@ scrollTopBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
 
+document.querySelector("body").addEventListener("click", console.log("clicked by window"))
+
 // ************************ Sliders
 
 // Home client Slider
 let homeSlider = new Swiper(".home_client_slider", {
   slidesPerView: 0,
   loop: true,
-  grabCursor: true,
-  // autoplay: true,
+  autoplay: true,
   pagination: {
     el: ".home_pagination",
     clickable: true,
