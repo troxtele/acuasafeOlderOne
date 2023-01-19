@@ -54,6 +54,12 @@ p {
   @apply bg-default-blue;
 }
 
+/* owl carousel */
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+  @apply h-full w-full overflow-hidden;
+}
 
 /*=== Main page ===*/
 /*  Nav Bar  */
@@ -63,11 +69,6 @@ p {
 
 .nav_large ul .parent_li:hover > .sub_menu {
   @apply opacity-100 visible top-full;
-}
-.owl-stage-outer,
-.owl-stage,
-.owl-item {
-  @apply h-full w-full overflow-hidden;
 }
 
 /*=== Water Section ===*/
@@ -111,10 +112,10 @@ p {
   @apply bg-slate-900/50;
 }
 .news .items .news_item:hover img {
-  @apply scale-105;
+  @apply scale-110;
 }
 
-/*=== about Page footer Section ===*/
+/*===  footer Section ===*/
 .email_container:focus-within {
   @apply border-default-blue;
 }
@@ -142,7 +143,6 @@ p {
 
 /* Shop Slide */
 .shop .items .slide {
-  background-image: url("../images/shape/shape-7.png");
   animation: slide 60s linear infinite;
   -webkit-animation: slide 60s linear infinite;
 }

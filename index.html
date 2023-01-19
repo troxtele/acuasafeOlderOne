@@ -468,8 +468,8 @@
             ></i>
             <div
               x-cloak
-              :class="open ? 'opacity-100 visible':'opacity-0 invisible' "
-              class="search_input absolute flex justify-center items-center px-4 bg-white/90 backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
+              :class="open ? 'opacity-100 visible scale-100':'opacity-0 invisible scale-50' "
+              class="search_input absolute flex justify-center items-center px-4 bg-white backdrop-blur-3xl top-14 right-full w-72 h-20 transition-all duration-500 rounded-md drop-shadow-lg"
             >
               <input
                 type="text"
@@ -1098,7 +1098,7 @@
       <div class="bg_img">
         <!-- Top bg -->
         <div
-          class="top_bg bg-about-top-curve bg-[bottom_center] absolute left-0 top-0 w-full h-[160px] bg-no-repeat bg-cover z-20"
+          class="top_bg bg-shape-1 bg-[bottom_center] absolute left-0 top-0 w-full h-[160px] bg-no-repeat bg-cover z-20"
         ></div>
         <!-- Bottom bg -->
         <div
@@ -1117,7 +1117,7 @@
           <div class="inner_bg">
             <!-- Shadow bg -->
             <div
-              class="shadow_bg bg-shadow-bg absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
+              class="shadow_bg bg-shape-2 absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
             ></div>
             <!--  BLOBS  -->
             <div
@@ -1196,7 +1196,7 @@
           <div class="inner_bg">
             <!-- Shadow bg -->
             <div
-              class="shadow_bg bg-shadow-bg absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
+              class="shadow_bg bg-shape-2 absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
             ></div>
             <!--  BLOBS  -->
             <div
@@ -1275,7 +1275,7 @@
           <div class="inner_bg">
             <!-- Shadow bg -->
             <div
-              class="shadow_bg bg-shadow-bg absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
+              class="shadow_bg bg-shape-2 absolute left-0 bottom-0 w-full h-[363px] bg-no-repeat bg-[top_center] bg-cover"
             ></div>
             <!--  BLOBS  -->
             <div
@@ -1478,7 +1478,7 @@
       <div class="container">
         <div class="content grid md:grid-cols-2 justify-between gap-16">
           <div
-            class="image md:-ml-20 flex items-center justify-center wow fadeInLeft animated"
+            class="image -ml-20 flex items-center justify-center wow fadeInLeft animated"
           >
             <img
               class="max-w-[42rem] w-full"
@@ -1534,13 +1534,13 @@
         <!-- Cirlce Shape -->
         <div class="circle-shape">
           <div
-            class="bg-shape-1 bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[250px] w-[900px] h-[900px] rounded-full bg-[#ffffff80]"
+            class="bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[250px] w-[900px] h-[900px] rounded-full bg-[#ffffff80]"
           ></div>
           <div
-            class="bg-shape-2 bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[150px] w-[700px] h-[700px] rounded-full bg-[#ffffff99] z-[1]"
+            class="bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[150px] w-[700px] h-[700px] rounded-full bg-[#ffffff99] z-[1]"
           ></div>
           <div
-            class="bg-shape-3 bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[50px] w-[500px] h-[500px] rounded-full bg-[#ffffff] z-[2]"
+            class="bg-shap absolute left-1/2 transform -translate-x-1/2 -bottom-[50px] w-[500px] h-[500px] rounded-full bg-[#ffffff] z-[2]"
           ></div>
         </div>
       </div>
@@ -1800,7 +1800,7 @@
               />
               <!-- Slide Flow -->
               <div
-                class="slide absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
+                class="slide bg-shape-7 absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
               ></div>
             </div>
             <div class="content flex flex-col justify-center gap-4">
@@ -1848,7 +1848,7 @@
               />
               <!-- Slide Flow -->
               <div
-                class="slide absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
+                class="slide bg-shape-7 absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
               ></div>
             </div>
             <div class="content flex flex-col justify-center gap-4">
@@ -1896,7 +1896,7 @@
               />
               <!-- Slide Flow -->
               <div
-                class="slide absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
+                class="slide bg-shape-7 absolute -bottom-[5px] bg-repeat-x w-full h-[10px]"
               ></div>
             </div>
             <div class="content flex flex-col justify-center gap-4">
@@ -1938,7 +1938,7 @@
     <!----------------------------------------->
     <!----- Client Section ----->
     <!----------------------------------------->
-    <section class="py-16 bg-[#f2f9ff] bg-black/10 relative">
+    <section class="py-16 bg-[#f2f9ff] relative">
       <!-- Background Images -->
       <div class="bg_img">
         <div
@@ -1962,7 +1962,7 @@
             <div class="swiper-wrapper">
               <!-- Client 1 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2003,7 +2003,7 @@
               </div>
               <!-- Client 2 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_2 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2044,7 +2044,7 @@
               </div>
               <!-- Client 3 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2085,7 +2085,7 @@
               </div>
               <!-- Client 4 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2126,7 +2126,7 @@
               </div>
               <!-- Client 5 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2167,7 +2167,7 @@
               </div>
               <!-- Client 6 -->
               <div
-                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff]"
+                class="swiper-slide h-auto grid justify-center items-center px-6 py-10 bg-[#fff] shadow-md"
               >
                 <div class="client_1 flex flex-col sm:flex-row gap-8">
                   <img
@@ -2474,21 +2474,21 @@
     <!----------------------------------------->
     <section class="news py-24 md:py-32">
       <div class="container">
-        <div class="content grid">
-          <div class="header flex justify-center mb-16 md:mb-2">
+        <div class="content grid gap-20">
+          <div class="header flex justify-center">
             <h2>Stay Update with Acuasafe</h2>
           </div>
           <div
-            class="items grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0 justify-center md:justify-start mt-20"
+            class="items grid gap-8 md:gap-0 md:flex md:flex-wrap lg:flex-nowrap md:shrink-0 justify-center md:justify-start"
           >
             <!-- item 1 -->
             <div
               class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 text-start max-w-[30rem]"
             >
               <div class="img relative overflow-hidden">
-                <a href="#">
+                <a href="#" class="w-full h-full">
                   <img
-                    class="w-full h-full relative transition-all duration-500"
+                    class="w-full h-full relative transition-all duration-500 scale-105"
                     src="./images/news/news-1.jpg"
                     alt="news-1"
                   />
@@ -2553,9 +2553,9 @@
               class="news_item wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 text-start max-w-[30rem]"
             >
               <div class="img relative overflow-hidden">
-                <a href="#">
+                <a href="#" class="w-full h-full">
                   <img
-                    class="w-full h-full relative transition-all duration-500"
+                    class="w-full h-full relative transition-all duration-500 scale-105"
                     src="./images/news/news-2.jpg"
                     alt="news-2"
                   />
@@ -2619,9 +2619,9 @@
               class="news_item sm:mt-4 lg:mt-0 wow fadeInUp animated lg:w-1/3 md:w-[50%] md:px-2 text-start max-w-[30rem]"
             >
               <div class="img relative overflow-hidden">
-                <a href="#">
+                <a href="#" class="w-full h-full">
                   <img
-                    class="w-full h-full relative transition-all duration-500"
+                    class="w-full h-full relative transition-all duration-500 scale-105"
                     src="./images/news/news-3.jpg"
                     alt="news-3"
                   />

@@ -26,7 +26,7 @@ scrollTopBtn.addEventListener("click", () => {
 // ************************ Sliders
 
 // Home client Slider
-var homeSlider = new Swiper(".home_client_slider", {
+let homeSlider = new Swiper(".home_client_slider", {
   slidesPerView: 0,
   loop: true,
   grabCursor: true,
@@ -47,7 +47,7 @@ var homeSlider = new Swiper(".home_client_slider", {
   },
 });
 // About Client Slider
-let swiper = new Swiper(".client_slider", {
+let swiper = new Swiper(".about_client_slider", {
   slidesPerView: 0,
   loop: true,
   autoplay: true,
