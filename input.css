@@ -7,15 +7,20 @@
 }
 
 .container {
-  @apply max-w-[82rem] m-auto px-10;
+  @apply max-w-[82rem] m-auto px-6 sm:px-10;
 }
 
 section {
   @apply overflow-hidden;
 }
 
+/* Overflow section */
 .overflow_section {
   @apply overflow-visible;
+}
+
+.overflow_section .items .item:hover img {
+  @apply scale-100
 }
 
 h1,
@@ -26,11 +31,11 @@ h4 {
 }
 
 h2 {
-  @apply text-3xl md:leading-snug md:text-4xl max-w-[37rem];
+  @apply text-2xl xs:text-3xl md:text-4xl md:leading-snug  max-w-[40rem] sm:px-6;
 }
 
 p {
-  @apply leading-8;
+  @apply leading-7;
 }
 
 /* All btns */
@@ -38,10 +43,20 @@ p {
   @apply -top-[10%] z-10;
 }
 
-/*=== Nav Bar ===*/
 [x-cloak] {
   @apply hidden !important;
 }
+/* Swiper Slider */
+.swiper-pagination-bullet {
+  @apply h-4 w-4 rounded-full bg-slate-500;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-default-blue;
+}
+
+
+/*=== Main page ===*/
+/*  Nav Bar  */
 .sub_menu {
   @apply opacity-0 invisible top-[110%];
 }
@@ -49,36 +64,30 @@ p {
 .nav_large ul .parent_li:hover > .sub_menu {
   @apply opacity-100 visible top-full;
 }
-
 .owl-stage-outer,
 .owl-stage,
 .owl-item {
   @apply h-full w-full overflow-hidden;
 }
 
-/*=== Main page ===*/
+/*=== Water Section ===*/
 
 /* Bottle man */
-.water .items .item {
-  transition: all 0.5s ease;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+.water .bg-shap {
+  box-shadow: 0px 0px 50px 0px #0000000d;
 }
-.water .items .item:hover {
-  transform: translateY(-15px);
-  box-shadow: 10px 10px 40px 5px rgba(0, 0, 0, 0.1);
+.water .item {
+  transition: all 0.5s ease;
+  box-shadow: 0px 10px 40px 0px #00000014;
+}
+.water .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 40px 0px #0000001f;
 }
 
 /* box shadow */
 .custom_shadow {
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* Swiper Slider */
-.swiper-pagination-bullet {
-  @apply h-4 w-4 rounded-full bg-slate-500;
-}
-.swiper-pagination-bullet-active {
-  @apply bg-default-blue;
 }
 
 /*=== Team Section ===*/
@@ -89,10 +98,14 @@ p {
   @apply scale-100;
 }
 
-/*=== bottle price Section ===*/
-.bottle_price .items .item:hover img {
+/*=== Shop Section ===*/
+.shop .items .item {
+  box-shadow: 0px 10px 50px 0px #0000001c;
+}
+.shop .items .item:hover img {
   @apply scale-100;
 }
+
 /*=== News Section ===*/
 .news .items .news_item:hover .hover_img {
   @apply bg-slate-900/50;
@@ -107,7 +120,6 @@ p {
 }
 /*  Animations ***************************************************/
 /* Animated Blob */
-
 .animated_blob {
   animation-name: blob;
   animation-duration: 10000ms;
@@ -128,8 +140,32 @@ p {
   }
 }
 
-/* Hero Slider Animation */
+/* Shop Slide */
+.shop .items .slide {
+  background-image: url("../images/shape/shape-7.png");
+  animation: slide 60s linear infinite;
+  -webkit-animation: slide 60s linear infinite;
+}
 
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1920px 0;
+  }
+}
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1920px 0;
+  }
+}
+
+/* Hero Slider Animation */
 .hero_slider .left_content h1 {
   opacity: 0;
   -webkit-transform: translateY(100px);

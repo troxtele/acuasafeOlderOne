@@ -29,7 +29,8 @@ scrollTopBtn.addEventListener("click", () => {
 var homeSlider = new Swiper(".home_client_slider", {
   slidesPerView: 0,
   loop: true,
-  autoplay: true,
+  grabCursor: true,
+  // autoplay: true,
   pagination: {
     el: ".home_pagination",
     clickable: true,
