@@ -494,7 +494,7 @@
     <!----------------------------------------->
     <nav
       x-data="{toggleSub: false}"
-      class="nav_small fixed top-0 right-0 bottom-0 w-72 z-50 transition-all duration-500"
+      class="nav_small fixed top-0 right-0 bottom-0 w-64 sm:w-80 z-50 transition-all duration-500"
       x-bind:class="nav ? 'visible ' : 'invisible' "
       x-cloak
     >
@@ -509,7 +509,7 @@
       <!-- floating -->
       <div
         x-bind:class="nav ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0' "
-        class="wrapper absolute top-0 right-0 bottom-0 overflow-auto transform transition-all duration-700 bg-default-small-nav w-72"
+        class="wrapper absolute top-0 right-0 bottom-0 overflow-auto transform transition-all duration-700 bg-default-small-nav w-64 sm:w-80"
       >
         <div class="logo py-10 px-6 flex justify-between items-center">
           <a href="#">
@@ -592,7 +592,7 @@
             <div class="flex justify-between items-center w-full px-4 py-2">
               <a
                 @click="nav = false"
-                href="./index.html"
+                href="./about.html"
                 class="hover:text-cyan-400 transition-all duration-300 w-full flex"
                 >pages</a
               >
@@ -1120,11 +1120,11 @@
             ></div>
             <!--  BLOBS  -->
             <div
-              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
+              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 lg:top-32 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
             ></div>
             <!-- Large Blob -->
             <div
-              class="hidden sm:block blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+              class="blob_large absolute -left-4 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
             ></div>
           </div>
 
@@ -1133,7 +1133,7 @@
           >
             <!-- Container bottle -->
             <div
-              class="large_bottle absolute h-[446px] w-[987px] -right-6 bottom-[63px] hidden lg:flex"
+              class="large_bottle absolute h-[450px] w-[990px] right-2 bottom-[60px] hidden lg:flex"
             >
               <!-- water drop -->
               <div class="water_drop">
@@ -1153,11 +1153,11 @@
             </div>
             <!-- Contents -->
             <div
-              class="left_content xs:-translate-y-16 -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+              class="left_content xs:-translate-y-16 -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-8 md:gap-10"
             >
               <div class="header flex justify-center">
                 <h1
-                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-6xl"
                 >
                   Always Want Safe and Good Water for Healthy Life
                 </h1>
@@ -1199,11 +1199,11 @@
             ></div>
             <!--  BLOBS  -->
             <div
-              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
+              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 lg:top-32 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
             ></div>
             <!-- Large Blob -->
             <div
-              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+              class="blob_large absolute -left-4 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
             ></div>
           </div>
 
@@ -1212,7 +1212,7 @@
           >
             <!-- Container bottle -->
             <div
-              class="large_bottle absolute h-[446px] w-[987px] -right-6 bottom-[63px] hidden lg:flex"
+              class="large_bottle absolute h-[450px] w-[990px] right-2 bottom-[60px] hidden lg:flex"
             >
               <!-- water drop -->
               <div class="water_drop">
@@ -1232,11 +1232,11 @@
             </div>
             <!-- Contents -->
             <div
-              class="left_content -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+              class="left_content -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-8 md:gap-10"
             >
               <div class="header flex justify-center">
                 <h1
-                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-6xl"
                 >
                   Pure Drinking water for healthy life ensured
                 </h1>
@@ -1278,11 +1278,11 @@
             ></div>
             <!--  BLOBS  -->
             <div
-              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
+              class="animated_blob absolute right-1/3 sm:right-40 lg:right-80 top-10 lg:top-32 bg-slate-400/10 w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full"
             ></div>
             <!-- Large Blob -->
             <div
-              class="blob_large absolute -left-16 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+              class="blob_large absolute -left-4 -top-52 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
             ></div>
           </div>
 
@@ -1291,7 +1291,7 @@
           >
             <!-- Container bottle -->
             <div
-              class="large_bottle absolute h-[446px] w-[987px] -right-6 bottom-[63px] hidden lg:flex"
+              class="large_bottle absolute h-[450px] w-[990px] right-2 bottom-[60px] hidden lg:flex"
             >
               <!-- water drop -->
               <div class="water_drop">
@@ -1311,19 +1311,19 @@
             </div>
             <!-- Contents -->
             <div
-              class="left_content -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-5 md:gap-10"
+              class="left_content -translate-y-20 lg:-translate-y-32 flex flex-col justify-center gap-8 md:gap-10"
             >
               <div class="header flex justify-center">
                 <h1
-                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-5xl"
+                  class="leading-tight text-3xl xs:leading-tight xs:text-4xl md:leading-tight md:text-6xl"
                 >
-                  Pure Drinking water for healthy life ensured
+                  Water Solutions with Highest Purity ensured
                 </h1>
               </div>
               <div class="text max-w-[25rem] md:max-w-[30rem] text-xl">
                 <p>
-                  We know you are searching for the purest and healthiest source
-                  for your daily water needs.
+                  We have the facility to ensure the highest purity as we use
+                  the Top class equipments.
                 </p>
               </div>
               <!-- Buttons -->
@@ -1348,6 +1348,7 @@
         </div>
       </div>
     </main>
+
     <!----------------------------------------->
     <!----- Feature Section ----->
     <!----------------------------------------->
@@ -1653,7 +1654,7 @@
                   class="item p-6 h-[18rem] max-w-[20rem] custom_shadow flex flex-col justify-center gap-4 bg-[#fff] drop-shadow-sm"
                 >
                   <!-- svg -->
-                  <div class="img flex justify-center lg:jutify-start">
+                  <div class="img flex justify-center lg:justify-start">
                     <img
                       class="max-w-[4rem]"
                       src="./images/water/softening.svg"
@@ -1690,15 +1691,15 @@
         </div>
         <!-- BLOBS -->
         <div
-          class="animated_blob absolute right-80 -top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
+          class="animated_blob absolute right-[25%] transform -translate-x-[25%] -top-10 bg-slate-400/10 w-[20rem] h-[20rem] rounded-full"
         ></div>
         <!-- Large Blob -->
         <div
-          class="blob_large absolute -right-16 -top-20 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
+          class="hidden sm:block blob_large absolute -right-16 -top-20 bg-slate-400/10 w-[35rem] h-[35rem] rounded-full"
         ></div>
       </div>
       <!-- ************************** -->
-      <div class="bg-center bg-cover bg-no-repeat py-20 bg-protect-bg">
+      <div class="bg-center bg-cover bg-no-repeat py-28 bg-protect-bg">
         <div class="container grid justify-center items-center lg:grid-cols-5">
           <!-- Main Content -->
           <div
@@ -1776,8 +1777,8 @@
     <!----------------------------------------->
     <!----- Shop Section ----->
     <!----------------------------------------->
-    <section class="shop py-16 lg:py-24">
-      <div class="container grid gap-16">
+    <section class="shop py-20 lg:py-24">
+      <div class="container grid gap-12">
         <div class="header flex justify-center">
           <h2 class="text-default-text-col">
             What Our Client are Saying About Acuasafe
@@ -2471,7 +2472,7 @@
     <!----------------------------------------->
     <!----- News Section ----->
     <!----------------------------------------->
-    <section class="news py-24 md:py-32">
+    <section class="news pt-24 py-16 md:py-32">
       <div class="container">
         <div class="content grid gap-20">
           <div class="header flex justify-center">
